@@ -9,7 +9,7 @@
 #import "YGCTrimVideoControlView.h"
 #import "UIView+YGCFrameUtil.h"
 
-static const CGFloat kDefaultControlBarWidth = 12;
+static const CGFloat kDefaultControlBarWidth = 10;
 
 @interface YGCTrimVideoControlView()
 

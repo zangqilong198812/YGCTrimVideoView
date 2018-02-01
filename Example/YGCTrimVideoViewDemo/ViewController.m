@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "YGCTrimVideoView.h"
 
-@interface ViewController ()
+@interface ViewController ()<YGCTrimVideoViewDelegate>
 @property (nonatomic, strong) YGCTrimVideoView *ygcTrimView;
+@property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) AVPlayerItem *playerItem;
+@property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @end
 
 @implementation ViewController
@@ -19,12 +22,26 @@
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"zuxian"
                                                      ofType:@"MP4"];
-    self.ygcTrimView = [[YGCTrimVideoView alloc] initWithFrame:CGRectMake(0, 75, self.view.bounds.size.width, 80)
+    self.ygcTrimView = [[YGCTrimVideoView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 75, self.view.bounds.size.width, 75)
                                                        assetUR:[NSURL fileURLWithPath:path]];
+    self.ygcTrimView.delegate = self;
     [self.view addSubview:self.ygcTrimView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+#pragma mark - Delegate
+
+- (void)videoBeginTimeChanged:(CMTime)begin timeCroppedAsset:(AVMutableComposition *)asset {
+
+}
+
+- (void)videoEndTimeChanged:(CMTime)end timeCroppedAsset:(AVMutableComposition *)asset {
+
+}
+
+- (IBAction)generatorVideo:(id)sender {
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -168,10 +168,10 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 #pragma mark - Trim ControlView Delegate
 
 - (void)leftSideBarChangedFrame:(CGRect)leftFrame rightBarCurrentFrame:(CGRect)rightFrame {
-    CGRect convertLeftBarRect = [self convertRect:leftFrame toView:self];
-    CGRect convertRightBarRect = [self convertRect:rightFrame toView:self];
-    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x;
-    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect);
+    CGRect convertLeftBarRect = [self.controlView convertRect:leftFrame toView:self];
+    CGRect convertRightBarRect = [self.controlView convertRect:rightFrame toView:self];
+    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x - self.controlInset;
+    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect) - self.controlInset;
     CGFloat startSec = leftPosition * [self pixelSeconds];
     CGFloat endSec = rightPosition * [self pixelSeconds];
     CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
@@ -184,10 +184,10 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 }
 
 - (void)rightSideBarChangedFrame:(CGRect)rightFrame leftBarCurrentFrame:(CGRect)leftFrame {
-    CGRect convertLeftBarRect = [self convertRect:leftFrame toView:self];
-    CGRect convertRightBarRect = [self convertRect:rightFrame toView:self];
-    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x;
-    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect);
+    CGRect convertLeftBarRect = [self.controlView convertRect:leftFrame toView:self];
+    CGRect convertRightBarRect = [self.controlView convertRect:rightFrame toView:self];
+    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x - self.controlInset;
+    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect) - self.controlInset;
     CGFloat startSec = leftPosition * [self pixelSeconds];
     CGFloat endSec = rightPosition * [self pixelSeconds];
     CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
