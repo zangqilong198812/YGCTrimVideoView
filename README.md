@@ -43,7 +43,7 @@ That's all
 ## Installing
 
 #### Cocoapods
-`pod 'YGCVideoToolbox`
+`pod 'YGCTrimVideoView'`
 
 ## Requirements
 
