@@ -292,12 +292,17 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
 - (void)exportVideo:(YGCExportFinished)finishedBlock {
     NSString *tmpFile = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:tmpFile]) {
+        [[NSFileManager defaultManager] removeItemAtPath:tmpFile error:nil];
+    }
     AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:self.currentAsset presetName:AVAssetExportPresetHighestQuality];
     session.outputURL = [NSURL fileURLWithPath:tmpFile];
     session.outputFileType = AVFileTypeQuickTimeMovie;
     [session exportAsynchronouslyWithCompletionHandler:^{
         if (session.status == AVAssetExportSessionStatusCompleted) {
-            finishedBlock(YES);
+            finishedBlock(YES, session.outputURL);
+        }else {
+            finishedBlock(NO, nil);
         }
     }];
 }

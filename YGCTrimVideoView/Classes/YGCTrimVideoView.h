@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-typedef void(^YGCExportFinished)(BOOL success);
+typedef void(^YGCExportFinished)(BOOL success, NSURL *outputURL);
 
 @protocol YGCTrimVideoViewDelegate <NSObject>
 
