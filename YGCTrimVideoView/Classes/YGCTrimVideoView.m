@@ -7,7 +7,6 @@
 //
 
 #import "YGCTrimVideoView.h"
-#import <AVFoundation/AVFoundation.h>
 #import "YGCTrimVideoControlView.h"
 #import "YGCThumbCollectionViewCell.h"
 #import "UIView+YGCFrameUtil.h"
@@ -18,7 +17,7 @@ static CGFloat const kDefaultMaxSeconds = 10;
 static CGFloat const kDefaultMinSeconds = 2;
 static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
-@interface YGCTrimVideoView()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface YGCTrimVideoView()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, YGCTrimVideoControlViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *thumbCollectionView;
 @property (nonatomic, strong) YGCTrimVideoControlView *controlView;
@@ -56,6 +55,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
     if (self = [super initWithFrame:frame]) {
 
         self.asset = [[AVURLAsset alloc] initWithURL:url options:nil];
+        _currentAsset = self.asset;
         self.controlInset = inset;
         self.leftSidebarImage = leftImage;
         self.rightSidebarImage = rightImage;
@@ -95,6 +95,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 - (YGCTrimVideoControlView *)controlView {
     if (_controlView == nil) {
         _controlView = [[YGCTrimVideoControlView alloc] initWithFrame:CGRectInset(self.bounds, self.controlInset, 0) leftControlImage:self.leftSidebarImage rightControlImage:self.rightSidebarImage centerRangeImage:self.centerRangeImage sideBarWidth:self.sidebarWidth];
+        _controlView.delegate = self;
     }
     return _controlView;
 }
@@ -164,6 +165,40 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
     return UIEdgeInsetsMake(0, self.controlInset, 0, 0);
 }
 
+#pragma mark - Trim ControlView Delegate
+
+- (void)leftSideBarChangedFrame:(CGRect)leftFrame rightBarCurrentFrame:(CGRect)rightFrame {
+    CGRect convertLeftBarRect = [self convertRect:leftFrame toView:self];
+    CGRect convertRightBarRect = [self convertRect:rightFrame toView:self];
+    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x;
+    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect);
+    CGFloat startSec = leftPosition * [self pixelSeconds];
+    CGFloat endSec = rightPosition * [self pixelSeconds];
+    CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
+    CMTime endTime = CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale);
+    AVMutableComposition *composition = [self trimVideo:startTime end:endTime];
+    _currentAsset = composition;
+    if ([self.delegate respondsToSelector:@selector(videoBeginTimeChanged:timeCroppedAsset:)]) {
+        [self.delegate videoBeginTimeChanged:startTime timeCroppedAsset:composition];
+    }
+}
+
+- (void)rightSideBarChangedFrame:(CGRect)rightFrame leftBarCurrentFrame:(CGRect)leftFrame {
+    CGRect convertLeftBarRect = [self convertRect:leftFrame toView:self];
+    CGRect convertRightBarRect = [self convertRect:rightFrame toView:self];
+    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x;
+    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect);
+    CGFloat startSec = leftPosition * [self pixelSeconds];
+    CGFloat endSec = rightPosition * [self pixelSeconds];
+    CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
+    CMTime endTime = CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale);
+    AVMutableComposition *composition = [self trimVideo:startTime end:endTime];
+    _currentAsset = composition;
+    if ([self.delegate respondsToSelector:@selector(videoEndTimeChanged:timeCroppedAsset:)]) {
+        [self.delegate videoEndTimeChanged:endTime timeCroppedAsset:composition];
+    }
+}
+
 #pragma mark - Private Method
 
 - (void)generateVideoThumb {
@@ -189,59 +224,50 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
     }];
 }
 
-//- (AVMutableComposition *)trimVideo {
-//    AVAssetTrack *assetVideoTrack = nil;
-//    AVAssetTrack *assetAudioTrack = nil;
-//    AVURLAsset *asset = self.asset;
-//    // Check if the asset contains video and audio tracks
-//    if ([[asset tracksWithMediaType:AVMediaTypeVideo] count] != 0) {
-//        assetVideoTrack = [asset tracksWithMediaType:AVMediaTypeVideo][0];
-//    }
-//    if ([[asset tracksWithMediaType:AVMediaTypeAudio] count] != 0) {
-//        assetAudioTrack = [asset tracksWithMediaType:AVMediaTypeAudio][0];
-//    }
-//
-//    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + self.controlView.leftControlView.frame.origin.x;
-//    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(self.controlView.rightControlView.frame);
-//    CGFloat startSec = leftPosition * _pixelPerSecond;
-//    CGFloat endSec = rightPosition * _pixelPerSecond;
-//    CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
-//    CMTime endTime = CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale);
-//    CMTimeRange cutRange = CMTimeRangeMake(CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale), CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale));
-//
-//
-//    NSError *error = nil;
-//
-//
-//
-//    // Step 1
-//    //  Create a composition with the given asset and insert audio and video tracks for half the duration into it from the asset
-//    self.mutableComposition = [AVMutableComposition composition];
-//
-//    // Insert half time range of the video and audio tracks from AVAsset
-//    if(assetVideoTrack != nil) {
-//        AVMutableCompositionTrack *compositionVideoTrack = [self.mutableComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
-//        [compositionVideoTrack insertTimeRange:cutRange ofTrack:assetVideoTrack atTime:kCMTimeZero error:&error];
-//        [compositionVideoTrack setPreferredTransform:assetVideoTrack.preferredTransform];
-//    }
-//    if(assetAudioTrack != nil) {
-//        AVMutableCompositionTrack *compositionAudioTrack = [self.mutableComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
-//        [compositionAudioTrack insertTimeRange:cutRange ofTrack:assetAudioTrack atTime:kCMTimeZero error:&error];
-//    }
-//
-//    CMTime acturalDuraton = CMTimeSubtract(endTime, startTime);
-//    [_mutableComposition removeTimeRange:CMTimeRangeMake(acturalDuraton, _mutableComposition.duration)];
-//
-//    NSString *tmpFile = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
-//    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:_mutableComposition presetName:AVAssetExportPresetHighestQuality];
-//    session.outputURL = [NSURL fileURLWithPath:tmpFile];
-//    session.outputFileType = AVFileTypeQuickTimeMovie;
-//    [session exportAsynchronouslyWithCompletionHandler:^{
-//        if (session.status == AVAssetExportSessionStatusCompleted) {
-//            NSLog(@"success,%@", tmpFile);
-//        }
-//    }];
-//    return _mutableComposition;
-//}
+- (AVMutableComposition *)trimVideo:(CMTime)start end:(CMTime)end {
+    AVAssetTrack *assetVideoTrack = nil;
+    AVAssetTrack *assetAudioTrack = nil;
+    AVURLAsset *asset = self.asset;
+    // Check if the asset contains video and audio tracks
+    if ([[asset tracksWithMediaType:AVMediaTypeVideo] count] != 0) {
+        assetVideoTrack = [asset tracksWithMediaType:AVMediaTypeVideo][0];
+    }
+    if ([[asset tracksWithMediaType:AVMediaTypeAudio] count] != 0) {
+        assetAudioTrack = [asset tracksWithMediaType:AVMediaTypeAudio][0];
+    }
 
+    CMTimeRange cutRange = CMTimeRangeMake(start, end);
+    NSError *error = nil;
+
+    AVMutableComposition *mutableComposition = [AVMutableComposition composition];
+
+    // Insert half time range of the video and audio tracks from AVAsset
+    if(assetVideoTrack != nil) {
+        AVMutableCompositionTrack *compositionVideoTrack = [mutableComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+        [compositionVideoTrack insertTimeRange:cutRange ofTrack:assetVideoTrack atTime:kCMTimeZero error:&error];
+        [compositionVideoTrack setPreferredTransform:assetVideoTrack.preferredTransform];
+    }
+    if(assetAudioTrack != nil) {
+        AVMutableCompositionTrack *compositionAudioTrack = [mutableComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
+        [compositionAudioTrack insertTimeRange:cutRange ofTrack:assetAudioTrack atTime:kCMTimeZero error:&error];
+    }
+
+    CMTime acturalDuraton = CMTimeSubtract(start, end);
+    [mutableComposition removeTimeRange:CMTimeRangeMake(acturalDuraton, mutableComposition.duration)];
+    return mutableComposition;
+}
+
+#pragma mark - Export
+
+- (void)exportVideo {
+    NSString *tmpFile = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
+    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:self.currentAsset presetName:AVAssetExportPresetHighestQuality];
+    session.outputURL = [NSURL fileURLWithPath:tmpFile];
+    session.outputFileType = AVFileTypeQuickTimeMovie;
+    [session exportAsynchronouslyWithCompletionHandler:^{
+        if (session.status == AVAssetExportSessionStatusCompleted) {
+            NSLog(@"success,%@", tmpFile);
+        }
+    }];
+}
 @end

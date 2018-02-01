@@ -122,6 +122,10 @@ static const CGFloat kDefaultControlBarWidth = 12;
         self.leftMaskView.frame = CGRectMake(0, 0, self.leftControlBar.ygc_minX, self.ygc_height);
         self.rightMaskView.frame = CGRectMake(self.rightControlBar.ygc_maxX, 0, self.ygc_width - self.rightControlBar.ygc_maxX, self.ygc_height);
         [gesture setTranslation:CGPointZero inView:self];
+
+        if ([self.delegate respondsToSelector:@selector(leftSideBarChangedFrame:rightBarCurrentFrame:)]) {
+            [self.delegate leftSideBarChangedFrame:self.leftControlBar.frame rightBarCurrentFrame:self.rightControlBar.frame];
+        }
     }
 }
 
@@ -145,6 +149,10 @@ static const CGFloat kDefaultControlBarWidth = 12;
         self.leftMaskView.frame = CGRectMake(0, 0, self.leftControlBar.ygc_minX, self.ygc_height);
         self.rightMaskView.frame = CGRectMake(self.rightControlBar.ygc_maxX, 0, self.ygc_width - self.rightControlBar.ygc_maxX, self.ygc_height);
         [gesture setTranslation:CGPointZero inView:self];
+
+        if ([self.delegate respondsToSelector:@selector(rightSideBarChangedFrame:leftBarCurrentFrame:)]) {
+            [self.delegate rightSideBarChangedFrame:self.rightControlBar.frame leftBarCurrentFrame:self.leftControlBar.frame];
+        }
     }
 }
 

@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol YGCTrimVideoControlViewDelegate <NSObject>
+
+- (void)leftSideBarChangedFrame:(CGRect)leftFrame rightBarCurrentFrame:(CGRect)rightFrame;
+
+- (void)rightSideBarChangedFrame:(CGRect)rightFrame leftBarCurrentFrame:(CGRect)leftFrame;
+
+@end
+
 @interface YGCTrimVideoControlView : UIView
+
+@property (nonatomic, weak) id<YGCTrimVideoControlViewDelegate> delegate;
 
 @property (nonatomic, strong) UIColor *maskColor;
 

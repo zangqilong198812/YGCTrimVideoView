@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@protocol YGCTrimVideoViewDelegate<NSObject>
+@protocol YGCTrimVideoViewDelegate <NSObject>
+
+- (void)videoBeginTimeChanged:(CMTime)begin timeCroppedAsset:(AVMutableComposition *)asset;
+
+- (void)videoEndTimeChanged:(CMTime)end timeCroppedAsset:(AVMutableComposition *)asset;
 
 @end
 
 @interface YGCTrimVideoView : UIView
+
+@property (nonatomic, weak) id<YGCTrimVideoViewDelegate> delegate;
+
+@property (nonatomic, strong, readonly) AVMutableComposition *currentAsset;
 
 /*
  * change the sidebar width
@@ -60,6 +69,6 @@
        sidebarWidth:(CGFloat)width
    controlViewInset:(CGFloat)inset;
 
-- (void)generateVideoThumb;
+- (void)exportVideo;
 
 @end
