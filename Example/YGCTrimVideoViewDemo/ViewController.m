@@ -30,7 +30,7 @@
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     [self.previewContainer.layer addSublayer:self.playerLayer];
     self.ygcTrimView = [[YGCTrimVideoView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 75, self.view.bounds.size.width, 75)
-                                                       assetUR:[NSURL fileURLWithPath:path]];
+                                                       assetURL:[NSURL fileURLWithPath:path]];
     self.ygcTrimView.delegate = self;
     [self.view addSubview:self.ygcTrimView];
     // Do any additional setup after loading the view, typically from a nib.

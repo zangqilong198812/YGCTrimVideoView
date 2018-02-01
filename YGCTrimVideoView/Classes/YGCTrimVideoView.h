@@ -58,10 +58,10 @@ typedef void(^YGCExportFinished)(BOOL success, NSURL *outputURL);
 @property (nonatomic, strong) UIColor *maskColor;
 
 - (id)initWithFrame:(CGRect)frame
-            assetUR:(NSURL *)url;
+            assetURL:(NSURL *)url;
 
 - (id)initWithFrame:(CGRect)frame
-            assetUR:(NSURL *)url
+            assetURL:(NSURL *)url
    leftSidebarImage:(UIImage *)leftImage
   rightSidebarImage:(UIImage *)rightImage
    centerRangeImage:(UIImage *)centerImage
