@@ -18,6 +18,10 @@ static CGFloat const kDefaultMinSeconds = 2;
 static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
 @interface YGCTrimVideoView()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, YGCTrimVideoControlViewDelegate>
+{
+    CMTime _startTime;
+    CMTime _endTime;
+}
 
 @property (nonatomic, strong) UICollectionView *thumbCollectionView;
 @property (nonatomic, strong) YGCTrimVideoControlView *controlView;
@@ -168,38 +172,40 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 #pragma mark - Trim ControlView Delegate
 
 - (void)leftSideBarChangedFrame:(CGRect)leftFrame rightBarCurrentFrame:(CGRect)rightFrame {
-    CGRect convertLeftBarRect = [self.controlView convertRect:leftFrame toView:self];
-    CGRect convertRightBarRect = [self.controlView convertRect:rightFrame toView:self];
-    CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x - self.controlInset;
-    CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect) - self.controlInset;
-    CGFloat startSec = leftPosition * [self pixelSeconds];
-    CGFloat endSec = rightPosition * [self pixelSeconds];
-    CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
-    CMTime endTime = CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale);
-    AVMutableComposition *composition = [self trimVideo:startTime end:endTime];
-    _currentAsset = composition;
-    if ([self.delegate respondsToSelector:@selector(videoBeginTimeChanged:timeCroppedAsset:)]) {
-        [self.delegate videoBeginTimeChanged:startTime timeCroppedAsset:composition];
+
+    [self refreshVideoTime:leftFrame rightFrmae:rightFrame];
+    if ([self.delegate respondsToSelector:@selector(videoBeginTimeChanged:)]) {
+        [self.delegate videoBeginTimeChanged:_startTime];
     }
 }
 
 - (void)rightSideBarChangedFrame:(CGRect)rightFrame leftBarCurrentFrame:(CGRect)leftFrame {
+    [self refreshVideoTime:leftFrame rightFrmae:rightFrame];
+    if ([self.delegate respondsToSelector:@selector(videoEndTimeChanged:)]) {
+        [self.delegate videoEndTimeChanged:_endTime];
+    }
+}
+
+- (void)panGestureEnded:(CGRect)leftFrame rightFrame:(CGRect)rightFrame {
+    [self refreshVideoTime:leftFrame rightFrmae:rightFrame];
+    _currentAsset = [self trimVideo];
+    if ([self.delegate respondsToSelector:@selector(dragActionEnded:)]) {
+        [self.delegate dragActionEnded:self.currentAsset];
+    }
+}
+
+#pragma mark - Private Method
+
+- (void)refreshVideoTime:(CGRect)leftFrame rightFrmae:(CGRect)rightFrame {
     CGRect convertLeftBarRect = [self.controlView convertRect:leftFrame toView:self];
     CGRect convertRightBarRect = [self.controlView convertRect:rightFrame toView:self];
     CGFloat leftPosition = self.thumbCollectionView.contentOffset.x + convertLeftBarRect.origin.x - self.controlInset;
     CGFloat rightPosition = self.thumbCollectionView.contentOffset.x + CGRectGetMaxX(convertRightBarRect) - self.controlInset;
     CGFloat startSec = leftPosition * [self pixelSeconds];
     CGFloat endSec = rightPosition * [self pixelSeconds];
-    CMTime startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
-    CMTime endTime = CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale);
-    AVMutableComposition *composition = [self trimVideo:startTime end:endTime];
-    _currentAsset = composition;
-    if ([self.delegate respondsToSelector:@selector(videoEndTimeChanged:timeCroppedAsset:)]) {
-        [self.delegate videoEndTimeChanged:endTime timeCroppedAsset:composition];
-    }
+    _startTime = CMTimeMakeWithSeconds(startSec, self.asset.duration.timescale);
+    _endTime = CMTimeMakeWithSeconds(endSec, self.asset.duration.timescale);
 }
-
-#pragma mark - Private Method
 
 - (void)generateVideoThumb {
     CMTimeScale timeScale = self.asset.duration.timescale;
@@ -224,7 +230,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
     }];
 }
 
-- (AVMutableComposition *)trimVideo:(CMTime)start end:(CMTime)end {
+- (AVMutableComposition *)trimVideo {
     AVAssetTrack *assetVideoTrack = nil;
     AVAssetTrack *assetAudioTrack = nil;
     AVURLAsset *asset = self.asset;
@@ -236,7 +242,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
         assetAudioTrack = [asset tracksWithMediaType:AVMediaTypeAudio][0];
     }
 
-    CMTimeRange cutRange = CMTimeRangeMake(start, end);
+    CMTimeRange cutRange = CMTimeRangeMake(_startTime, _endTime);
     NSError *error = nil;
 
     AVMutableComposition *mutableComposition = [AVMutableComposition composition];
@@ -252,7 +258,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
         [compositionAudioTrack insertTimeRange:cutRange ofTrack:assetAudioTrack atTime:kCMTimeZero error:&error];
     }
 
-    CMTime acturalDuraton = CMTimeSubtract(start, end);
+    CMTime acturalDuraton = CMTimeSubtract(_endTime, _startTime);
     [mutableComposition removeTimeRange:CMTimeRangeMake(acturalDuraton, mutableComposition.duration)];
     return mutableComposition;
 }

@@ -126,6 +126,10 @@ static const CGFloat kDefaultControlBarWidth = 10;
         if ([self.delegate respondsToSelector:@selector(leftSideBarChangedFrame:rightBarCurrentFrame:)]) {
             [self.delegate leftSideBarChangedFrame:self.leftControlBar.frame rightBarCurrentFrame:self.rightControlBar.frame];
         }
+    }else if(gesture.state == UIGestureRecognizerStateEnded || gesture.state == UIGestureRecognizerStateCancelled) {
+        if ([self.delegate respondsToSelector:@selector(panGestureEnded:rightFrame:)]) {
+            [self.delegate panGestureEnded:self.leftControlBar.frame rightFrame:self.rightControlBar.frame];
+        }
     }
 }
 
@@ -152,6 +156,10 @@ static const CGFloat kDefaultControlBarWidth = 10;
 
         if ([self.delegate respondsToSelector:@selector(rightSideBarChangedFrame:leftBarCurrentFrame:)]) {
             [self.delegate rightSideBarChangedFrame:self.rightControlBar.frame leftBarCurrentFrame:self.leftControlBar.frame];
+        }
+    }else if(gesture.state == UIGestureRecognizerStateEnded || gesture.state == UIGestureRecognizerStateCancelled) {
+        if ([self.delegate respondsToSelector:@selector(panGestureEnded:rightFrame:)]) {
+            [self.delegate panGestureEnded:self.leftControlBar.frame rightFrame:self.rightControlBar.frame];
         }
     }
 }

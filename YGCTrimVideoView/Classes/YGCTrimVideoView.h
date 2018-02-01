@@ -11,9 +11,11 @@
 
 @protocol YGCTrimVideoViewDelegate <NSObject>
 
-- (void)videoBeginTimeChanged:(CMTime)begin timeCroppedAsset:(AVMutableComposition *)asset;
+- (void)videoBeginTimeChanged:(CMTime)begin;
 
-- (void)videoEndTimeChanged:(CMTime)end timeCroppedAsset:(AVMutableComposition *)asset;
+- (void)videoEndTimeChanged:(CMTime)end;
+
+- (void)dragActionEnded:(AVMutableComposition *)asset;
 
 @end
 

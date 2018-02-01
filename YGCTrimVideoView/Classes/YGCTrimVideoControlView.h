@@ -14,6 +14,8 @@
 
 - (void)rightSideBarChangedFrame:(CGRect)rightFrame leftBarCurrentFrame:(CGRect)leftFrame;
 
+- (void)panGestureEnded:(CGRect)leftFrame rightFrame:(CGRect)rightFrame;
+
 @end
 
 @interface YGCTrimVideoControlView : UIView

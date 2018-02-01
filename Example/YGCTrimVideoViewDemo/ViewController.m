@@ -10,8 +10,10 @@
 #import "YGCTrimVideoView.h"
 
 @interface ViewController ()<YGCTrimVideoViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *previewContainer;
 @property (nonatomic, strong) YGCTrimVideoView *ygcTrimView;
 @property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) AVPlayerItem *originItem;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @end
@@ -22,6 +24,11 @@
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"zuxian"
                                                      ofType:@"MP4"];
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:path] options:nil];
+    self.originItem = [[AVPlayerItem alloc] initWithAsset:asset];
+    self.player = [[AVPlayer alloc] initWithPlayerItem:self.originItem];
+    self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+    [self.previewContainer.layer addSublayer:self.playerLayer];
     self.ygcTrimView = [[YGCTrimVideoView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 75, self.view.bounds.size.width, 75)
                                                        assetUR:[NSURL fileURLWithPath:path]];
     self.ygcTrimView.delegate = self;
@@ -29,13 +36,40 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-#pragma mark - Delegate
-
-- (void)videoBeginTimeChanged:(CMTime)begin timeCroppedAsset:(AVMutableComposition *)asset {
-
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.player play];
 }
 
-- (void)videoEndTimeChanged:(CMTime)end timeCroppedAsset:(AVMutableComposition *)asset {
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.playerLayer.frame = self.previewContainer.bounds;
+}
+
+#pragma mark - Delegate
+
+- (void)videoBeginTimeChanged:(CMTime)begin {
+    if ([self.player currentItem] != self.originItem) {
+        [self.player replaceCurrentItemWithPlayerItem:self.originItem];
+    }
+    [self.player seekToTime:begin completionHandler:^(BOOL finished) {
+
+    }];
+}
+
+- (void)videoEndTimeChanged:(CMTime)end {
+    if ([self.player currentItem] != self.originItem) {
+        [self.player replaceCurrentItemWithPlayerItem:self.originItem];
+    }
+    [self.player seekToTime:end completionHandler:^(BOOL finished) {
+
+    }];
+}
+
+- (void)dragActionEnded:(AVMutableComposition *)asset {
+    self.playerItem = [[AVPlayerItem alloc] initWithAsset:asset];
+    [self.player replaceCurrentItemWithPlayerItem:self.playerItem];
+    [self.player play];
 
 }
 
