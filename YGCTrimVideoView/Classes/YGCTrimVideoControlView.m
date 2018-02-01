@@ -216,4 +216,15 @@ static const CGFloat kDefaultControlBarWidth = 10;
     self.rightMaskView.backgroundColor = _maskColor;
 }
 
+#pragma mark - Public Method
+- (void)resetLeftSideBarImage:(UIImage *)leftImage {
+    self.leftControlBar.image = leftImage;
+}
+- (void)resetRightSideBarImage:(UIImage *)rightImage {
+    self.rightControlBar.image = rightImage;
+}
+- (void)resetCenterRangeImage:(UIImage *)centerRangeImage {
+    self.centerRangeView.image = centerRangeImage;
+}
+
 @end

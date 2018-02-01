@@ -30,6 +30,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 @property (nonatomic, strong) AVAssetImageGenerator *imageGenerator;
 @property (nonatomic, strong) NSMutableArray<UIImage *> *thumbImageArray;
 @property (nonatomic, strong) NSMutableArray<NSValue *> *timeArray;
+@property (nonatomic, assign) CGFloat sidebarWidth;
 
 @end
 
@@ -142,6 +143,25 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 - (void)setMinSeconds:(NSTimeInterval)minSeconds {
     _minSeconds = minSeconds;
     self.controlView.mininumTimeWidth = _minSeconds / [self pixelSeconds];
+}
+
+- (void)setSidebarWidth:(CGFloat)sidebarWidth {
+    _sidebarWidth = sidebarWidth;
+}
+
+- (void)setLeftSidebarImage:(UIImage *)leftSidebarImage {
+    _leftSidebarImage = leftSidebarImage;
+    [self.controlView resetLeftSideBarImage:leftSidebarImage];
+}
+
+- (void)setRightSidebarImage:(UIImage *)rightSidebarImage {
+    _rightSidebarImage = rightSidebarImage;
+    [self.controlView resetRightSideBarImage:rightSidebarImage];
+}
+
+- (void)setCenterRangeImage:(UIImage *)centerRangeImage {
+    _centerRangeImage = centerRangeImage;
+    [self.controlView resetCenterRangeImage:centerRangeImage];
 }
 
 #pragma mark - CollectionView DataSource

@@ -33,4 +33,7 @@
    centerRangeImage:(UIImage *)centerImage
        sideBarWidth:(CGFloat)sidebarWidth;
 
+- (void)resetLeftSideBarImage:(UIImage *)leftImage;
+- (void)resetRightSideBarImage:(UIImage *)rightImage;
+- (void)resetCenterRangeImage:(UIImage *)centerRangeImage;
 @end

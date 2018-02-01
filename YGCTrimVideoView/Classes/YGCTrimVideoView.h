@@ -28,11 +28,6 @@ typedef void(^YGCExportFinished)(BOOL success);
 @property (nonatomic, strong, readonly) AVMutableComposition *currentAsset;
 
 /*
- * change the sidebar width
- */
-@property (nonatomic, assign) CGFloat sidebarWidth;
-
-/*
  * change the left sidebar Image
  */
 @property (nonatomic, strong) UIImage *leftSidebarImage;
