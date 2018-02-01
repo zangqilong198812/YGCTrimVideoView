@@ -33,6 +33,10 @@
                                                        assetUR:[NSURL fileURLWithPath:path]];
     self.ygcTrimView.delegate = self;
     [self.view addSubview:self.ygcTrimView];
+
+    self.ygcTrimView.maskColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.5];
+    self.ygcTrimView.maxSeconds = 25;
+    self.ygcTrimView.minSeconds = 10;
     // Do any additional setup after loading the view, typically from a nib.
 }
 

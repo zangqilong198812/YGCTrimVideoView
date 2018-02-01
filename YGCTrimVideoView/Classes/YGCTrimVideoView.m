@@ -139,6 +139,11 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
     }
 }
 
+- (void)setMinSeconds:(NSTimeInterval)minSeconds {
+    _minSeconds = minSeconds;
+    self.controlView.mininumTimeWidth = _minSeconds / [self pixelSeconds];
+}
+
 #pragma mark - CollectionView DataSource
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
