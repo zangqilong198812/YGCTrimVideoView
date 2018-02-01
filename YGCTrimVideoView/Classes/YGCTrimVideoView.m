@@ -59,17 +59,17 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 {
     if (self = [super initWithFrame:frame]) {
 
-        self.asset = [[AVURLAsset alloc] initWithURL:url options:nil];
+        _asset = [[AVURLAsset alloc] initWithURL:url options:nil];
         _currentAsset = self.asset;
-        self.controlInset = inset;
-        self.leftSidebarImage = leftImage;
-        self.rightSidebarImage = rightImage;
-        self.centerRangeImage = centerImage;
-        self.sidebarWidth = width;
+        _controlInset = inset;
+        _leftSidebarImage = leftImage;
+        _rightSidebarImage = rightImage;
+        _centerRangeImage = centerImage;
+        _sidebarWidth = width;
         self.thumbImageArray = [NSMutableArray array];
         self.timeArray = [NSMutableArray array];
-        self.maxSeconds = kDefaultMaxSeconds;
-        self.minSeconds = kDefaultMinSeconds;
+        _maxSeconds = kDefaultMaxSeconds;
+        _minSeconds = kDefaultMinSeconds;
         [self commonInit];
         [self generateVideoThumb];
     }
