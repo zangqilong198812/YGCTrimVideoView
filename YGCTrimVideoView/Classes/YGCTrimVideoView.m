@@ -191,7 +191,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, self.controlInset, 0, 0);
+    return UIEdgeInsetsMake(0, self.controlInset, 0, self.controlInset);
 }
 
 #pragma mark - Trim ControlView Delegate

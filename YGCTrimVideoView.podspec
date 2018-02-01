@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YGCTrimVideoView'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'A wechat like video editor view.'
 
 # This description is used to generate tags and improve search results.
