@@ -37,6 +37,6 @@ Pod::Spec.new do |s|
     'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.xcassets']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/**/YGCTrimVideoView.h'
   s.frameworks = 'AVFoundation'
 end
