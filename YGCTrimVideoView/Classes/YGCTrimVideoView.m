@@ -66,6 +66,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
         self.maxSeconds = kDefaultMaxSeconds;
         self.minSeconds = kDefaultMinSeconds;
         [self commonInit];
+        [self generateVideoThumb];
     }
     return self;
 }

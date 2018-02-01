@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50C03D192023098E001A4416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D182023098E001A4416 /* AppDelegate.m */; };
+		50C03D1C2023098E001A4416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D1B2023098E001A4416 /* ViewController.m */; };
+		50C03D1F2023098E001A4416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D1D2023098E001A4416 /* Main.storyboard */; };
+		50C03D212023098E001A4416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D202023098E001A4416 /* Assets.xcassets */; };
+		50C03D242023098E001A4416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D222023098E001A4416 /* LaunchScreen.storyboard */; };
+		50C03D272023098E001A4416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D262023098E001A4416 /* main.m */; };
+		50C03D312023098E001A4416 /* YGCTrimVideoViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D302023098E001A4416 /* YGCTrimVideoViewDemoTests.m */; };
+		50C03D3C2023098E001A4416 /* YGCTrimVideoViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D3B2023098E001A4416 /* YGCTrimVideoViewDemoUITests.m */; };
+		50C03D5B202309C8001A4416 /* UIView+YGCFrameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D51202309C8001A4416 /* UIView+YGCFrameUtil.m */; };
+		50C03D5C202309C8001A4416 /* YGCThumbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D53202309C8001A4416 /* YGCThumbCollectionViewCell.m */; };
+		50C03D5D202309C8001A4416 /* YGCTrimVideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D55202309C8001A4416 /* YGCTrimVideoControlView.m */; };
+		50C03D5E202309C8001A4416 /* YGCTrimVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D57202309C8001A4416 /* YGCTrimVideoView.m */; };
+		50C03D60202309FD001A4416 /* trim.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D5F202309FC001A4416 /* trim.xcassets */; };
+		50C03D6220230A79001A4416 /* zuxian.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D6120230A79001A4416 /* zuxian.MP4 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50C03D2D2023098E001A4416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50C03D0C2023098E001A4416 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C03D132023098E001A4416;
+			remoteInfo = YGCTrimVideoViewDemo;
+		};
+		50C03D382023098E001A4416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50C03D0C2023098E001A4416 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C03D132023098E001A4416;
+			remoteInfo = YGCTrimVideoViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50C03D142023098E001A4416 /* YGCTrimVideoViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGCTrimVideoViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C03D172023098E001A4416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50C03D182023098E001A4416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50C03D1A2023098E001A4416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50C03D1B2023098E001A4416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		50C03D1E2023098E001A4416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50C03D202023098E001A4416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50C03D232023098E001A4416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50C03D252023098E001A4416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C03D262023098E001A4416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50C03D2C2023098E001A4416 /* YGCTrimVideoViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YGCTrimVideoViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C03D302023098E001A4416 /* YGCTrimVideoViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YGCTrimVideoViewDemoTests.m; sourceTree = "<group>"; };
+		50C03D322023098E001A4416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C03D372023098E001A4416 /* YGCTrimVideoViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YGCTrimVideoViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C03D3B2023098E001A4416 /* YGCTrimVideoViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YGCTrimVideoViewDemoUITests.m; sourceTree = "<group>"; };
+		50C03D3D2023098E001A4416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C03D50202309C8001A4416 /* UIView+YGCFrameUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YGCFrameUtil.h"; sourceTree = "<group>"; };
+		50C03D51202309C8001A4416 /* UIView+YGCFrameUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YGCFrameUtil.m"; sourceTree = "<group>"; };
+		50C03D52202309C8001A4416 /* YGCThumbCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGCThumbCollectionViewCell.h; sourceTree = "<group>"; };
+		50C03D53202309C8001A4416 /* YGCThumbCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCThumbCollectionViewCell.m; sourceTree = "<group>"; };
+		50C03D54202309C8001A4416 /* YGCTrimVideoControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGCTrimVideoControlView.h; sourceTree = "<group>"; };
+		50C03D55202309C8001A4416 /* YGCTrimVideoControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCTrimVideoControlView.m; sourceTree = "<group>"; };
+		50C03D56202309C8001A4416 /* YGCTrimVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGCTrimVideoView.h; sourceTree = "<group>"; };
+		50C03D57202309C8001A4416 /* YGCTrimVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCTrimVideoView.m; sourceTree = "<group>"; };
+		50C03D5F202309FC001A4416 /* trim.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = trim.xcassets; sourceTree = "<group>"; };
+		50C03D6120230A79001A4416 /* zuxian.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zuxian.MP4; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50C03D112023098E001A4416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C03D292023098E001A4416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C03D342023098E001A4416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50C03D0B2023098E001A4416 = {
+			isa = PBXGroup;
+			children = (
+				50C03D162023098E001A4416 /* YGCTrimVideoViewDemo */,
+				50C03D2F2023098E001A4416 /* YGCTrimVideoViewDemoTests */,
+				50C03D3A2023098E001A4416 /* YGCTrimVideoViewDemoUITests */,
+				50C03D152023098E001A4416 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50C03D152023098E001A4416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D142023098E001A4416 /* YGCTrimVideoViewDemo.app */,
+				50C03D2C2023098E001A4416 /* YGCTrimVideoViewDemoTests.xctest */,
+				50C03D372023098E001A4416 /* YGCTrimVideoViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50C03D162023098E001A4416 /* YGCTrimVideoViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D4A202309C8001A4416 /* YGCTrimVideoView */,
+				50C03D172023098E001A4416 /* AppDelegate.h */,
+				50C03D182023098E001A4416 /* AppDelegate.m */,
+				50C03D1A2023098E001A4416 /* ViewController.h */,
+				50C03D1B2023098E001A4416 /* ViewController.m */,
+				50C03D1D2023098E001A4416 /* Main.storyboard */,
+				50C03D202023098E001A4416 /* Assets.xcassets */,
+				50C03D222023098E001A4416 /* LaunchScreen.storyboard */,
+				50C03D252023098E001A4416 /* Info.plist */,
+				50C03D262023098E001A4416 /* main.m */,
+			);
+			path = YGCTrimVideoViewDemo;
+			sourceTree = "<group>";
+		};
+		50C03D2F2023098E001A4416 /* YGCTrimVideoViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D302023098E001A4416 /* YGCTrimVideoViewDemoTests.m */,
+				50C03D322023098E001A4416 /* Info.plist */,
+			);
+			path = YGCTrimVideoViewDemoTests;
+			sourceTree = "<group>";
+		};
+		50C03D3A2023098E001A4416 /* YGCTrimVideoViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D3B2023098E001A4416 /* YGCTrimVideoViewDemoUITests.m */,
+				50C03D3D2023098E001A4416 /* Info.plist */,
+			);
+			path = YGCTrimVideoViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		50C03D4A202309C8001A4416 /* YGCTrimVideoView */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D6120230A79001A4416 /* zuxian.MP4 */,
+				50C03D4B202309C8001A4416 /* Assets */,
+				50C03D4E202309C8001A4416 /* Classes */,
+			);
+			name = YGCTrimVideoView;
+			path = ../../YGCTrimVideoView;
+			sourceTree = "<group>";
+		};
+		50C03D4B202309C8001A4416 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D5F202309FC001A4416 /* trim.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		50C03D4E202309C8001A4416 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				50C03D50202309C8001A4416 /* UIView+YGCFrameUtil.h */,
+				50C03D51202309C8001A4416 /* UIView+YGCFrameUtil.m */,
+				50C03D52202309C8001A4416 /* YGCThumbCollectionViewCell.h */,
+				50C03D53202309C8001A4416 /* YGCThumbCollectionViewCell.m */,
+				50C03D54202309C8001A4416 /* YGCTrimVideoControlView.h */,
+				50C03D55202309C8001A4416 /* YGCTrimVideoControlView.m */,
+				50C03D56202309C8001A4416 /* YGCTrimVideoView.h */,
+				50C03D57202309C8001A4416 /* YGCTrimVideoView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50C03D132023098E001A4416 /* YGCTrimVideoViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C03D402023098E001A4416 /* Build configuration list for PBXNativeTarget "YGCTrimVideoViewDemo" */;
+			buildPhases = (
+				50C03D102023098E001A4416 /* Sources */,
+				50C03D112023098E001A4416 /* Frameworks */,
+				50C03D122023098E001A4416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YGCTrimVideoViewDemo;
+			productName = YGCTrimVideoViewDemo;
+			productReference = 50C03D142023098E001A4416 /* YGCTrimVideoViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50C03D2B2023098E001A4416 /* YGCTrimVideoViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C03D432023098E001A4416 /* Build configuration list for PBXNativeTarget "YGCTrimVideoViewDemoTests" */;
+			buildPhases = (
+				50C03D282023098E001A4416 /* Sources */,
+				50C03D292023098E001A4416 /* Frameworks */,
+				50C03D2A2023098E001A4416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C03D2E2023098E001A4416 /* PBXTargetDependency */,
+			);
+			name = YGCTrimVideoViewDemoTests;
+			productName = YGCTrimVideoViewDemoTests;
+			productReference = 50C03D2C2023098E001A4416 /* YGCTrimVideoViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50C03D362023098E001A4416 /* YGCTrimVideoViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C03D462023098E001A4416 /* Build configuration list for PBXNativeTarget "YGCTrimVideoViewDemoUITests" */;
+			buildPhases = (
+				50C03D332023098E001A4416 /* Sources */,
+				50C03D342023098E001A4416 /* Frameworks */,
+				50C03D352023098E001A4416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C03D392023098E001A4416 /* PBXTargetDependency */,
+			);
+			name = YGCTrimVideoViewDemoUITests;
+			productName = YGCTrimVideoViewDemoUITests;
+			productReference = 50C03D372023098E001A4416 /* YGCTrimVideoViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50C03D0C2023098E001A4416 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Qilong Zang";
+				TargetAttributes = {
+					50C03D132023098E001A4416 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					50C03D2B2023098E001A4416 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 50C03D132023098E001A4416;
+					};
+					50C03D362023098E001A4416 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 50C03D132023098E001A4416;
+					};
+				};
+			};
+			buildConfigurationList = 50C03D0F2023098E001A4416 /* Build configuration list for PBXProject "YGCTrimVideoViewDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50C03D0B2023098E001A4416;
+			productRefGroup = 50C03D152023098E001A4416 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50C03D132023098E001A4416 /* YGCTrimVideoViewDemo */,
+				50C03D2B2023098E001A4416 /* YGCTrimVideoViewDemoTests */,
+				50C03D362023098E001A4416 /* YGCTrimVideoViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50C03D122023098E001A4416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C03D242023098E001A4416 /* LaunchScreen.storyboard in Resources */,
+				50C03D60202309FD001A4416 /* trim.xcassets in Resources */,
+				50C03D212023098E001A4416 /* Assets.xcassets in Resources */,
+				50C03D1F2023098E001A4416 /* Main.storyboard in Resources */,
+				50C03D6220230A79001A4416 /* zuxian.MP4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C03D2A2023098E001A4416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C03D352023098E001A4416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50C03D102023098E001A4416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C03D5B202309C8001A4416 /* UIView+YGCFrameUtil.m in Sources */,
+				50C03D5E202309C8001A4416 /* YGCTrimVideoView.m in Sources */,
+				50C03D1C2023098E001A4416 /* ViewController.m in Sources */,
+				50C03D272023098E001A4416 /* main.m in Sources */,
+				50C03D192023098E001A4416 /* AppDelegate.m in Sources */,
+				50C03D5D202309C8001A4416 /* YGCTrimVideoControlView.m in Sources */,
+				50C03D5C202309C8001A4416 /* YGCThumbCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C03D282023098E001A4416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C03D312023098E001A4416 /* YGCTrimVideoViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C03D332023098E001A4416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C03D3C2023098E001A4416 /* YGCTrimVideoViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50C03D2E2023098E001A4416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50C03D132023098E001A4416 /* YGCTrimVideoViewDemo */;
+			targetProxy = 50C03D2D2023098E001A4416 /* PBXContainerItemProxy */;
+		};
+		50C03D392023098E001A4416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50C03D132023098E001A4416 /* YGCTrimVideoViewDemo */;
+			targetProxy = 50C03D382023098E001A4416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50C03D1D2023098E001A4416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C03D1E2023098E001A4416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50C03D222023098E001A4416 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C03D232023098E001A4416 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50C03D3E2023098E001A4416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50C03D3F2023098E001A4416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50C03D412023098E001A4416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = YGCTrimVideoViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zangqilong.YGCTrimVideoViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50C03D422023098E001A4416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = YGCTrimVideoViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zangqilong.YGCTrimVideoViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		50C03D442023098E001A4416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDGAK6XCMW;
+				INFOPLIST_FILE = YGCTrimVideoViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zangqilong.YGCTrimVideoViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YGCTrimVideoViewDemo.app/YGCTrimVideoViewDemo";
+			};
+			name = Debug;
+		};
+		50C03D452023098E001A4416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDGAK6XCMW;
+				INFOPLIST_FILE = YGCTrimVideoViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zangqilong.YGCTrimVideoViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YGCTrimVideoViewDemo.app/YGCTrimVideoViewDemo";
+			};
+			name = Release;
+		};
+		50C03D472023098E001A4416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDGAK6XCMW;
+				INFOPLIST_FILE = YGCTrimVideoViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zangqilong.YGCTrimVideoViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YGCTrimVideoViewDemo;
+			};
+			name = Debug;
+		};
+		50C03D482023098E001A4416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDGAK6XCMW;
+				INFOPLIST_FILE = YGCTrimVideoViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zangqilong.YGCTrimVideoViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YGCTrimVideoViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50C03D0F2023098E001A4416 /* Build configuration list for PBXProject "YGCTrimVideoViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C03D3E2023098E001A4416 /* Debug */,
+				50C03D3F2023098E001A4416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C03D402023098E001A4416 /* Build configuration list for PBXNativeTarget "YGCTrimVideoViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C03D412023098E001A4416 /* Debug */,
+				50C03D422023098E001A4416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C03D432023098E001A4416 /* Build configuration list for PBXNativeTarget "YGCTrimVideoViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C03D442023098E001A4416 /* Debug */,
+				50C03D452023098E001A4416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50C03D462023098E001A4416 /* Build configuration list for PBXNativeTarget "YGCTrimVideoViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C03D472023098E001A4416 /* Debug */,
+				50C03D482023098E001A4416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50C03D0C2023098E001A4416 /* Project object */;
+}
