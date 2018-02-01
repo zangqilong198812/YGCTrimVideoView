@@ -12,7 +12,7 @@
 #import "YGCThumbCollectionViewCell.h"
 #import "UIView+YGCFrameUtil.h"
 
-static NSInteger const kMaxThumbCount = 30;
+//static NSInteger const kMaxThumbCount = 30;
 static CGFloat const kDefaultSidebarWidth = 12;
 static CGFloat const kDefaultMaxSeconds = 10;
 static CGFloat const kDefaultMinSeconds = 2;
@@ -161,10 +161,6 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, self.controlInset, 0, 0);
-}
-
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"will display cell row %d", indexPath.row);
 }
 
 #pragma mark - Private Method

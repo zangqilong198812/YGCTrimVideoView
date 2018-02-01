@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "UIView+YGCFrameUtil.h"
+#import "YGCThumbCollectionViewCell.h"
+#import "YGCTrimVideoControlView.h"
+#import "YGCTrimVideoView.h"
 
 FOUNDATION_EXPORT double YGCTrimVideoViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char YGCTrimVideoViewVersionString[];

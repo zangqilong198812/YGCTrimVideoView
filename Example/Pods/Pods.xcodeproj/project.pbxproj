@@ -8,17 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		02B9B40A50D8FA88F71607F1AC338F20 /* Pods-YGCTrimVideoView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C91C5107DFBE5381417FF71EABE7B0 /* Pods-YGCTrimVideoView_Tests-dummy.m */; };
-		07E07DF8E93D6952F1AA978C0598259B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		07E07DF8E93D6952F1AA978C0598259B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828B7422B8C5C7BC4BF9C20A6D7B397 /* Foundation.framework */; };
+		0B1B6137DFF0F124D732FBE57E79F877 /* UIView+YGCFrameUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2C079E22A52F432061BB1CCE8182BF /* UIView+YGCFrameUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CA5ED0592690067C1DD6A7E2C703521 /* YGCTrimVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF689885C15B4904D308B556A28E6681 /* YGCTrimVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD60C72FA4A6829F14183C9B74DE0DC /* YGCThumbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E93402A52AA3B4DF7F703DCA7EFAE9F /* YGCThumbCollectionViewCell.m */; };
+		56988B2380745A968338B18086B427DA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840966EAD0718963750ABB9F4A6EB218 /* AVFoundation.framework */; };
+		5DA5EB728F6AEB3867CFBF512144FEBC /* UIView+YGCFrameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D596CB0ACD4FF252FDB224A2D9D3F0F7 /* UIView+YGCFrameUtil.m */; };
 		5E009C1CE6FF6C15EAD34A8C80C7B331 /* Pods-YGCTrimVideoView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AEE3377CC75E35C81A13EEE84E70FA /* Pods-YGCTrimVideoView_Example-dummy.m */; };
-		8B39571B83928CD2CA094678DE44AD12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6A54B4A9B30A18F403F9BEB8DB02B1D5 /* YGCTrimVideoView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CFAFE707C5823E935C1846E6213ABA2 /* YGCTrimVideoView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C29CD73D81F74829226B4AF8F32AC17 /* YGCTrimVideoControlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F7AD38AADC71B08AA861C63A4F5539 /* YGCTrimVideoControlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C8672574B8CF105692833BF4F4A6D0E /* YGCTrimVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A889E3850FA39A836F74493A63B85F1C /* YGCTrimVideoView.m */; };
+		86CE92468ED87A62B48921E383E4200E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828B7422B8C5C7BC4BF9C20A6D7B397 /* Foundation.framework */; };
+		99811E5016582DED14AFAC10CA0E268D /* YGCTrimVideoView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6133FE4BC20EAA00C5927EAF9EDBC1F3 /* YGCTrimVideoView.bundle */; };
 		A97CCD105FD2609E4F1D7A53441139B1 /* Pods-YGCTrimVideoView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A78495D253946EFC5A7648E58475C42B /* Pods-YGCTrimVideoView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB0DDCAEADA16218C548F1217C4F6798 /* Pods-YGCTrimVideoView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C35BAF2B3DC27C96350D7DA4AA6C3726 /* Pods-YGCTrimVideoView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C594F2EBF25ED1009FEC2F1EFF75C735 /* YGCTrimVideoView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22642CCA5D5287E0E5499114C2B1902D /* YGCTrimVideoView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F87C549E08169770E8234D8EE45970C1 /* YGCTrimVideoView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4DC35163D157E26731BF1E96A5BFA3 /* YGCTrimVideoView-dummy.m */; };
-		FF2DCDD232A0542A1771C7BB8CD192E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C9C8145614B453475F9DDB4515ABEFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CAEC5B90C9F9EAE3B93FE2B73E9DEC /* Assets.xcassets */; };
+		CEE1011479E9CE6D45187F36C265C9CF /* YGCTrimVideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4FDE61128F6B42D4E995D97352D596 /* YGCTrimVideoControlView.m */; };
+		E8C52ED28A0C45F55F3694DBF49D2859 /* YGCThumbCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 454A4E23973486CC95F2C07AFA19538B /* YGCThumbCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE744D72B4F471282101C40B277C8D8A /* YGCTrimVideoView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8294D239A5FD1A4419B9E721A823298B /* YGCTrimVideoView-dummy.m */; };
+		FF2DCDD232A0542A1771C7BB8CD192E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828B7422B8C5C7BC4BF9C20A6D7B397 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		126703346DB5D4DB9C5AD036AFD35833 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B83A5F19341F12B12CF821A5E9EFC910;
+			remoteInfo = "YGCTrimVideoView-YGCTrimVideoView";
+		};
 		F742291CD6ECD7FC8E9B16408F948B7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -29,40 +47,59 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D8ED736D72DC572A58CF75A6270CD3 /* YGCTrimVideoView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YGCTrimVideoView-prefix.pch"; sourceTree = "<group>"; };
 		05036A66EFFB1CF1BD85DDC523DA5939 /* Pods-YGCTrimVideoView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YGCTrimVideoView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		054440B0C227ADF06802FB1AAF851166 /* Pods-YGCTrimVideoView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YGCTrimVideoView_Example.modulemap"; sourceTree = "<group>"; };
+		054440B0C227ADF06802FB1AAF851166 /* Pods-YGCTrimVideoView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YGCTrimVideoView_Example.modulemap"; sourceTree = "<group>"; };
 		0A37BBEC8F6AFF24563D3FA02E9688B4 /* Pods-YGCTrimVideoView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YGCTrimVideoView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0E93402A52AA3B4DF7F703DCA7EFAE9F /* YGCThumbCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YGCThumbCollectionViewCell.m; path = YGCTrimVideoView/Classes/YGCThumbCollectionViewCell.m; sourceTree = "<group>"; };
 		15C91C5107DFBE5381417FF71EABE7B0 /* Pods-YGCTrimVideoView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YGCTrimVideoView_Tests-dummy.m"; sourceTree = "<group>"; };
+		1915733CD1373E1A8A8EF080C01643F6 /* YGCTrimVideoView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YGCTrimVideoView.modulemap; sourceTree = "<group>"; };
 		1E453EF0064788BBF3155E41A075066A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22642CCA5D5287E0E5499114C2B1902D /* YGCTrimVideoView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YGCTrimVideoView-umbrella.h"; sourceTree = "<group>"; };
+		2828B7422B8C5C7BC4BF9C20A6D7B397 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2E90C5B357BA5ABC96D103953DE10F99 /* Pods-YGCTrimVideoView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YGCTrimVideoView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		2FDF48C27ECCBF7DEEC4247E1A305640 /* YGCTrimVideoView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YGCTrimVideoView.xcconfig; sourceTree = "<group>"; };
 		334400D7EFC35C204444B26C244BC8CB /* Pods-YGCTrimVideoView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YGCTrimVideoView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		39F023E1C67083BD117CBD7AFF1BC1D2 /* Pods-YGCTrimVideoView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YGCTrimVideoView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		40A35C832D7F627FC72A0D34896238E8 /* Pods-YGCTrimVideoView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YGCTrimVideoView_Tests.modulemap"; sourceTree = "<group>"; };
-		4A4DC35163D157E26731BF1E96A5BFA3 /* YGCTrimVideoView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YGCTrimVideoView-dummy.m"; sourceTree = "<group>"; };
+		40A35C832D7F627FC72A0D34896238E8 /* Pods-YGCTrimVideoView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YGCTrimVideoView_Tests.modulemap"; sourceTree = "<group>"; };
+		4348D1D892A1D3145023F73950DB3DE7 /* Pods_YGCTrimVideoView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YGCTrimVideoView_Tests.framework; path = "Pods-YGCTrimVideoView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		454A4E23973486CC95F2C07AFA19538B /* YGCThumbCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGCThumbCollectionViewCell.h; path = YGCTrimVideoView/Classes/YGCThumbCollectionViewCell.h; sourceTree = "<group>"; };
+		47F7AD38AADC71B08AA861C63A4F5539 /* YGCTrimVideoControlView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGCTrimVideoControlView.h; path = YGCTrimVideoView/Classes/YGCTrimVideoControlView.h; sourceTree = "<group>"; };
 		524A2E8BD5AB3C58A013D3D4B0E0682B /* Pods-YGCTrimVideoView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YGCTrimVideoView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5BA1E281CACDFF85A1E43D76D335A0A3 /* YGCTrimVideoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YGCTrimVideoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6133FE4BC20EAA00C5927EAF9EDBC1F3 /* YGCTrimVideoView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = YGCTrimVideoView.bundle; path = YGCTrimVideoView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3E835D36DE80B0BAB6A9ABBDC6BED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		67AEE3377CC75E35C81A13EEE84E70FA /* Pods-YGCTrimVideoView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YGCTrimVideoView_Example-dummy.m"; sourceTree = "<group>"; };
-		694704E09ACF5ABF2B740B47E7EB9074 /* YGCTrimVideoView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YGCTrimVideoView.xcconfig; sourceTree = "<group>"; };
 		6F09290C6F6159EF2F78D7AD81998B42 /* Pods-YGCTrimVideoView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YGCTrimVideoView_Example-resources.sh"; sourceTree = "<group>"; };
+		6F4FDE61128F6B42D4E995D97352D596 /* YGCTrimVideoControlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YGCTrimVideoControlView.m; path = YGCTrimVideoView/Classes/YGCTrimVideoControlView.m; sourceTree = "<group>"; };
 		6F50FA992EF7CF01003DBC4D2EDF82D9 /* Pods-YGCTrimVideoView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YGCTrimVideoView_Tests-resources.sh"; sourceTree = "<group>"; };
+		7A2C079E22A52F432061BB1CCE8182BF /* UIView+YGCFrameUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+YGCFrameUtil.h"; path = "YGCTrimVideoView/Classes/UIView+YGCFrameUtil.h"; sourceTree = "<group>"; };
 		7D9AAC45CE813A7DF05A9262C0A5206E /* Pods-YGCTrimVideoView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YGCTrimVideoView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8FB6D5783A61391F3955B43110D9D8A6 /* YGCTrimVideoView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YGCTrimVideoView-prefix.pch"; sourceTree = "<group>"; };
+		8294D239A5FD1A4419B9E721A823298B /* YGCTrimVideoView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YGCTrimVideoView-dummy.m"; sourceTree = "<group>"; };
+		840966EAD0718963750ABB9F4A6EB218 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		89CAEC5B90C9F9EAE3B93FE2B73E9DEC /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = YGCTrimVideoView/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		8CFAFE707C5823E935C1846E6213ABA2 /* YGCTrimVideoView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YGCTrimVideoView-umbrella.h"; sourceTree = "<group>"; };
 		9005CADA8885099E2CA589C1B73168F5 /* Pods-YGCTrimVideoView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YGCTrimVideoView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7485C33B5DDB94C13B8C61634C912DC /* ResourceBundle-YGCTrimVideoView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-YGCTrimVideoView-Info.plist"; sourceTree = "<group>"; };
 		A78495D253946EFC5A7648E58475C42B /* Pods-YGCTrimVideoView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YGCTrimVideoView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B9696E263CE4F18E6E2B76612E4483E7 /* Pods_YGCTrimVideoView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YGCTrimVideoView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA0661979937561B9E312E75A5F306E1 /* Pods_YGCTrimVideoView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YGCTrimVideoView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A889E3850FA39A836F74493A63B85F1C /* YGCTrimVideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YGCTrimVideoView.m; path = YGCTrimVideoView/Classes/YGCTrimVideoView.m; sourceTree = "<group>"; };
+		B5067393C4543067D282614B7626F8DE /* Pods_YGCTrimVideoView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YGCTrimVideoView_Example.framework; path = "Pods-YGCTrimVideoView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E8D640F9A5CBDA84CEF98D21203E76 /* YGCTrimVideoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YGCTrimVideoView.framework; path = YGCTrimVideoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DD5BF63B465A5194280DC3EC350260 /* Pods-YGCTrimVideoView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YGCTrimVideoView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C35BAF2B3DC27C96350D7DA4AA6C3726 /* Pods-YGCTrimVideoView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YGCTrimVideoView_Example-umbrella.h"; sourceTree = "<group>"; };
-		C7E87886D2241193D342D71318C572BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB3EB8238D8B77A576BB305D922F738 /* Pods-YGCTrimVideoView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YGCTrimVideoView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F759554339FC6AEE249CBB4C61EA3E75 /* YGCTrimVideoView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YGCTrimVideoView.modulemap; sourceTree = "<group>"; };
+		D596CB0ACD4FF252FDB224A2D9D3F0F7 /* UIView+YGCFrameUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+YGCFrameUtil.m"; path = "YGCTrimVideoView/Classes/UIView+YGCFrameUtil.m"; sourceTree = "<group>"; };
+		F86EC97CC0C6120A20DB54DA278B4F5C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF689885C15B4904D308B556A28E6681 /* YGCTrimVideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGCTrimVideoView.h; path = YGCTrimVideoView/Classes/YGCTrimVideoView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1275F6F7CFF48A89573B55443A9317B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B70EDFA5AC0D028B97251B91E700CCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,11 +108,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC4736A2C86CAD3BB1EBAA27644D8B1D /* Frameworks */ = {
+		9852B9838F0DD35EA918866B114558B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B39571B83928CD2CA094678DE44AD12 /* Foundation.framework in Frameworks */,
+				56988B2380745A968338B18086B427DA /* AVFoundation.framework in Frameworks */,
+				86CE92468ED87A62B48921E383E4200E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,14 +128,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		229289E02483E49410C479A00B940609 /* Products */ = {
+		1EAC923310F388FCBFAF190962D6724D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B9696E263CE4F18E6E2B76612E4483E7 /* Pods_YGCTrimVideoView_Example.framework */,
-				BA0661979937561B9E312E75A5F306E1 /* Pods_YGCTrimVideoView_Tests.framework */,
-				5BA1E281CACDFF85A1E43D76D335A0A3 /* YGCTrimVideoView.framework */,
+				65B40EAE5134183304C6D72F85E41286 /* YGCTrimVideoView */,
 			);
-			name = Products;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		2CC4E32651BC0AA354D29516A18CBAAA /* Targets Support Files */ = {
@@ -109,38 +145,84 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3B292505C03EDC72C42C6FF7D1B261A1 /* Support Files */ = {
+		4238CEC32F1BB98D2D987C48CA297D3E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C7E87886D2241193D342D71318C572BF /* Info.plist */,
-				F759554339FC6AEE249CBB4C61EA3E75 /* YGCTrimVideoView.modulemap */,
-				694704E09ACF5ABF2B740B47E7EB9074 /* YGCTrimVideoView.xcconfig */,
-				4A4DC35163D157E26731BF1E96A5BFA3 /* YGCTrimVideoView-dummy.m */,
-				8FB6D5783A61391F3955B43110D9D8A6 /* YGCTrimVideoView-prefix.pch */,
-				22642CCA5D5287E0E5499114C2B1902D /* YGCTrimVideoView-umbrella.h */,
+				F86EC97CC0C6120A20DB54DA278B4F5C /* Info.plist */,
+				A7485C33B5DDB94C13B8C61634C912DC /* ResourceBundle-YGCTrimVideoView-Info.plist */,
+				1915733CD1373E1A8A8EF080C01643F6 /* YGCTrimVideoView.modulemap */,
+				2FDF48C27ECCBF7DEEC4247E1A305640 /* YGCTrimVideoView.xcconfig */,
+				8294D239A5FD1A4419B9E721A823298B /* YGCTrimVideoView-dummy.m */,
+				02D8ED736D72DC572A58CF75A6270CD3 /* YGCTrimVideoView-prefix.pch */,
+				8CFAFE707C5823E935C1846E6213ABA2 /* YGCTrimVideoView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/YGCTrimVideoView";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB9C43F4BAD2992BD9EE60E0C1AC390B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63EF7A5B59D14A3A61740ECC24C82A93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89CAEC5B90C9F9EAE3B93FE2B73E9DEC /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		65B40EAE5134183304C6D72F85E41286 /* YGCTrimVideoView */ = {
+			isa = PBXGroup;
+			children = (
+				7A2C079E22A52F432061BB1CCE8182BF /* UIView+YGCFrameUtil.h */,
+				D596CB0ACD4FF252FDB224A2D9D3F0F7 /* UIView+YGCFrameUtil.m */,
+				454A4E23973486CC95F2C07AFA19538B /* YGCThumbCollectionViewCell.h */,
+				0E93402A52AA3B4DF7F703DCA7EFAE9F /* YGCThumbCollectionViewCell.m */,
+				47F7AD38AADC71B08AA861C63A4F5539 /* YGCTrimVideoControlView.h */,
+				6F4FDE61128F6B42D4E995D97352D596 /* YGCTrimVideoControlView.m */,
+				FF689885C15B4904D308B556A28E6681 /* YGCTrimVideoView.h */,
+				A889E3850FA39A836F74493A63B85F1C /* YGCTrimVideoView.m */,
+				63EF7A5B59D14A3A61740ECC24C82A93 /* Resources */,
+				4238CEC32F1BB98D2D987C48CA297D3E /* Support Files */,
+			);
+			name = YGCTrimVideoView;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				C944C489E8361E0F97ED59EA7114E61D /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				229289E02483E49410C479A00B940609 /* Products */,
+				1EAC923310F388FCBFAF190962D6724D /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				8A23B3182036714066B454CF5AB4B0C7 /* Products */,
 				2CC4E32651BC0AA354D29516A18CBAAA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A9B01BDA2754C6F1DD50C9BB9E29D443 /* YGCTrimVideoView */ = {
+		8A23B3182036714066B454CF5AB4B0C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B292505C03EDC72C42C6FF7D1B261A1 /* Support Files */,
+				B5067393C4543067D282614B7626F8DE /* Pods_YGCTrimVideoView_Example.framework */,
+				4348D1D892A1D3145023F73950DB3DE7 /* Pods_YGCTrimVideoView_Tests.framework */,
+				6133FE4BC20EAA00C5927EAF9EDBC1F3 /* YGCTrimVideoView.bundle */,
+				B7E8D640F9A5CBDA84CEF98D21203E76 /* YGCTrimVideoView.framework */,
 			);
-			name = YGCTrimVideoView;
-			path = ../..;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB9C43F4BAD2992BD9EE60E0C1AC390B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				840966EAD0718963750ABB9F4A6EB218 /* AVFoundation.framework */,
+				2828B7422B8C5C7BC4BF9C20A6D7B397 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		AE3FC15BE882350C8C06AC8CC13916FF /* Pods-YGCTrimVideoView_Example */ = {
@@ -159,30 +241,6 @@
 			);
 			name = "Pods-YGCTrimVideoView_Example";
 			path = "Target Support Files/Pods-YGCTrimVideoView_Example";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C944C489E8361E0F97ED59EA7114E61D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A9B01BDA2754C6F1DD50C9BB9E29D443 /* YGCTrimVideoView */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		ECE8D3BF4C2D00DA6A5453447D719358 /* Pods-YGCTrimVideoView_Tests */ = {
@@ -206,14 +264,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B25CA97600A1A0F52D611286BCCC1A6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C594F2EBF25ED1009FEC2F1EFF75C735 /* YGCTrimVideoView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5439C94C3A6DE63255F7BD541164924C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +277,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB0DDCAEADA16218C548F1217C4F6798 /* Pods-YGCTrimVideoView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC566F10D23A4AD9ED14BA22E67B0059 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B1B6137DFF0F124D732FBE57E79F877 /* UIView+YGCFrameUtil.h in Headers */,
+				E8C52ED28A0C45F55F3694DBF49D2859 /* YGCThumbCollectionViewCell.h in Headers */,
+				6C29CD73D81F74829226B4AF8F32AC17 /* YGCTrimVideoControlView.h in Headers */,
+				6A54B4A9B30A18F403F9BEB8DB02B1D5 /* YGCTrimVideoView-umbrella.h in Headers */,
+				1CA5ED0592690067C1DD6A7E2C703521 /* YGCTrimVideoView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,24 +309,43 @@
 			);
 			name = "Pods-YGCTrimVideoView_Tests";
 			productName = "Pods-YGCTrimVideoView_Tests";
-			productReference = BA0661979937561B9E312E75A5F306E1 /* Pods_YGCTrimVideoView_Tests.framework */;
+			productReference = 4348D1D892A1D3145023F73950DB3DE7 /* Pods_YGCTrimVideoView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B916EC9870CE95A38E8EA5074C6DF815 /* YGCTrimVideoView */ = {
+		B83A5F19341F12B12CF821A5E9EFC910 /* YGCTrimVideoView-YGCTrimVideoView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E883464CBFE8D51D4F90F686FB1A5E66 /* Build configuration list for PBXNativeTarget "YGCTrimVideoView" */;
+			buildConfigurationList = 235AA364D036029343DAE5F080F89274 /* Build configuration list for PBXNativeTarget "YGCTrimVideoView-YGCTrimVideoView" */;
 			buildPhases = (
-				2348FEA56AFC289D1A5C1064450B8668 /* Sources */,
-				BC4736A2C86CAD3BB1EBAA27644D8B1D /* Frameworks */,
-				0B25CA97600A1A0F52D611286BCCC1A6 /* Headers */,
+				AB89032332EAED642C010D278513AF3F /* Sources */,
+				1275F6F7CFF48A89573B55443A9317B7 /* Frameworks */,
+				9D7495F0703DCBCA7F8FD776907EC616 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = "YGCTrimVideoView-YGCTrimVideoView";
+			productName = "YGCTrimVideoView-YGCTrimVideoView";
+			productReference = 6133FE4BC20EAA00C5927EAF9EDBC1F3 /* YGCTrimVideoView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B916EC9870CE95A38E8EA5074C6DF815 /* YGCTrimVideoView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E883464CBFE8D51D4F90F686FB1A5E66 /* Build configuration list for PBXNativeTarget "YGCTrimVideoView" */;
+			buildPhases = (
+				4B21838AA217D9176196BD06D0C0FBC4 /* Sources */,
+				9852B9838F0DD35EA918866B114558B1 /* Frameworks */,
+				50AAD4DCC3CEA19A868BD117B0F62274 /* Resources */,
+				EC566F10D23A4AD9ED14BA22E67B0059 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3065F1C471CF119A34445FC4F2A6D594 /* PBXTargetDependency */,
+			);
 			name = YGCTrimVideoView;
 			productName = YGCTrimVideoView;
-			productReference = 5BA1E281CACDFF85A1E43D76D335A0A3 /* YGCTrimVideoView.framework */;
+			productReference = B7E8D640F9A5CBDA84CEF98D21203E76 /* YGCTrimVideoView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BBF573430F168B6377D42A6974C695EB /* Pods-YGCTrimVideoView_Example */ = {
@@ -282,7 +363,7 @@
 			);
 			name = "Pods-YGCTrimVideoView_Example";
 			productName = "Pods-YGCTrimVideoView_Example";
-			productReference = B9696E263CE4F18E6E2B76612E4483E7 /* Pods_YGCTrimVideoView_Example.framework */;
+			productReference = B5067393C4543067D282614B7626F8DE /* Pods_YGCTrimVideoView_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -302,23 +383,54 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 229289E02483E49410C479A00B940609 /* Products */;
+			productRefGroup = 8A23B3182036714066B454CF5AB4B0C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BBF573430F168B6377D42A6974C695EB /* Pods-YGCTrimVideoView_Example */,
 				8FF783634DC09A922D422C2DEB4E6EE1 /* Pods-YGCTrimVideoView_Tests */,
 				B916EC9870CE95A38E8EA5074C6DF815 /* YGCTrimVideoView */,
+				B83A5F19341F12B12CF821A5E9EFC910 /* YGCTrimVideoView-YGCTrimVideoView */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		50AAD4DCC3CEA19A868BD117B0F62274 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99811E5016582DED14AFAC10CA0E268D /* YGCTrimVideoView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D7495F0703DCBCA7F8FD776907EC616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C8145614B453475F9DDB4515ABEFC9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2348FEA56AFC289D1A5C1064450B8668 /* Sources */ = {
+		4B21838AA217D9176196BD06D0C0FBC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87C549E08169770E8234D8EE45970C1 /* YGCTrimVideoView-dummy.m in Sources */,
+				5DA5EB728F6AEB3867CFBF512144FEBC /* UIView+YGCFrameUtil.m in Sources */,
+				2FD60C72FA4A6829F14183C9B74DE0DC /* YGCThumbCollectionViewCell.m in Sources */,
+				CEE1011479E9CE6D45187F36C265C9CF /* YGCTrimVideoControlView.m in Sources */,
+				FE744D72B4F471282101C40B277C8D8A /* YGCTrimVideoView-dummy.m in Sources */,
+				6C8672574B8CF105692833BF4F4A6D0E /* YGCTrimVideoView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB89032332EAED642C010D278513AF3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +453,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3065F1C471CF119A34445FC4F2A6D594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YGCTrimVideoView-YGCTrimVideoView";
+			target = B83A5F19341F12B12CF821A5E9EFC910 /* YGCTrimVideoView-YGCTrimVideoView */;
+			targetProxy = 126703346DB5D4DB9C5AD036AFD35833 /* PBXContainerItemProxy */;
+		};
 		A37CC073D2CB44A97E13F28BF200711A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = YGCTrimVideoView;
@@ -352,7 +470,7 @@
 /* Begin XCBuildConfiguration section */
 		190D088DEEDC5E901277F71DF79308BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 694704E09ACF5ABF2B740B47E7EB9074 /* YGCTrimVideoView.xcconfig */;
+			baseConfigurationReference = 2FDF48C27ECCBF7DEEC4247E1A305640 /* YGCTrimVideoView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -595,7 +713,7 @@
 		};
 		85D9CF129C5712292B6C6064A25274D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 694704E09ACF5ABF2B740B47E7EB9074 /* YGCTrimVideoView.xcconfig */;
+			baseConfigurationReference = 2FDF48C27ECCBF7DEEC4247E1A305640 /* YGCTrimVideoView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -619,6 +737,38 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0474936A8C2DFB55FCF203DAFC17323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FDF48C27ECCBF7DEEC4247E1A305640 /* YGCTrimVideoView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YGCTrimVideoView";
+				INFOPLIST_FILE = "Target Support Files/YGCTrimVideoView/ResourceBundle-YGCTrimVideoView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = YGCTrimVideoView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		D6A4C29DAADE177CDC74451BA0E9E06B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FDF48C27ECCBF7DEEC4247E1A305640 /* YGCTrimVideoView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/YGCTrimVideoView";
+				INFOPLIST_FILE = "Target Support Files/YGCTrimVideoView/ResourceBundle-YGCTrimVideoView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = YGCTrimVideoView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -657,6 +807,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		235AA364D036029343DAE5F080F89274 /* Build configuration list for PBXNativeTarget "YGCTrimVideoView-YGCTrimVideoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6A4C29DAADE177CDC74451BA0E9E06B /* Debug */,
+				B0474936A8C2DFB55FCF203DAFC17323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

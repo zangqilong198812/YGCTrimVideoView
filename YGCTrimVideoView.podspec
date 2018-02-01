@@ -29,12 +29,12 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/zangqilong198812/YGCTrimVideoView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'YGCTrimVideoView/Classes/**/*'
   
   s.resource_bundles = {
-    'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.pdf']
+    'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.xcassets']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

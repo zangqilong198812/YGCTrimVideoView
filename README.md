@@ -20,14 +20,14 @@ A wechat like video trim time view.
 ### Features
 - [x] left and right time control
 - [x] custom your left side bar and right
-- [x] support setup maxmium duration and minimum duration
+- [x] support setup maximum duration and minimum duration
 
 
 ## Usage
 ### Initialize
 
 ```  
-NSString *path = [[NSBundle mainBundle] pathForResource:@"videoName"
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"videoName"
                                                      ofType:@"MP4"];
     YGCTrimVideoView *ygcTrimView = [[YGCTrimVideoView alloc] initWithFrame:CGRectMake(0, 75, self.view.bounds.size.width, 80)
                                                        assetUR:[NSURL fileURLWithPath:path]];
