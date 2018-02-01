@@ -44,7 +44,7 @@ static const CGFloat kDefaultControlBarWidth = 10;
             self.leftControlBar.image = leftImage;
         }
 
-        if (!leftImage) {
+        if (!rightImage) {
             self.rightControlBar.image = [UIImage imageNamed:@"default_sidebar_image"];
         }else {
             self.rightControlBar.image = rightImage;
