@@ -1,0 +1,6 @@
+framework module YGCTrimVideoView {
+  umbrella header "YGCTrimVideoView-umbrella.h"
+
+  export *
+  module * { export * }
+}

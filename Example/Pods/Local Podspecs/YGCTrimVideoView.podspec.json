@@ -1,0 +1,22 @@
+{
+  "name": "YGCTrimVideoView",
+  "version": "0.1.0",
+  "summary": "A short description of YGCTrimVideoView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zangqilong/YGCTrimVideoView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zangqilong": "zangqilong@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/zangqilong/YGCTrimVideoView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "YGCTrimVideoView/Classes/**/*"
+}

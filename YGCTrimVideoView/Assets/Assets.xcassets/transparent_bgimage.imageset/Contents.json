@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "transparent_bgimage.pdf",
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 16,
+          "height" : 22
+        },
+        "cap-insets" : {
+          "bottom" : 44,
+          "top" : 39,
+          "right" : 125,
+          "left" : 131
+        }
+      }
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

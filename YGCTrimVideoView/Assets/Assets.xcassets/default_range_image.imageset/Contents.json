@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "default_range_image.pdf",
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 10,
+          "height" : 16
+        },
+        "cap-insets" : {
+          "bottom" : 14,
+          "top" : 16,
+          "right" : 93,
+          "left" : 91
+        }
+      }
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

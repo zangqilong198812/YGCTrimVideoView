@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'YGCTrimVideoView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of YGCTrimVideoView.'
+  s.summary          = 'A wechat like video editor view.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,25 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        A wechat like video editor view. You could setup the maximum duration of a video and the minimum duration of a video.
+                        Also include the function of custom your time slider view.
                        DESC
 
-  s.homepage         = 'https://github.com/zangqilong/YGCTrimVideoView'
+  s.homepage         = 'https://github.com/zangqilong198812/YGCTrimVideoView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zangqilong' => 'zangqilong@gmail.com' }
-  s.source           = { :git => 'https://github.com/zangqilong/YGCTrimVideoView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/zangqilong198812/YGCTrimVideoView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'YGCTrimVideoView/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.pdf']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'AVFoundation'
 end
