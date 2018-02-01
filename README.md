@@ -1,29 +1,65 @@
+<div align = "center">
+<img src="https://ws1.sinaimg.cn/large/006tNc79ly1fo0zzmjr5mj30jg05kq4a.jpg" width="700" />
+</div>
+
+<p align="center">
+<img src="https://img.shields.io/badge/ObjC-2.0-orange.svg" alt="Objective-C"/>
+<img src="https://img.shields.io/badge/platform-iOS-brightgreen.svg" alt="Platform: iOS"/>
+<img src="https://img.shields.io/badge/Xcode-9%2B-brightgreen.svg" alt="XCode 9+"/>
+<img src="https://img.shields.io/badge/iOS-11%2B-brightgreen.svg" alt="iOS 11"/>
+<img src="https://img.shields.io/badge/licence-MIT-lightgray.svg" alt="Licence MIT"/>
+</a>
+</p>
+
 # YGCTrimVideoView
 
-[![CI Status](http://img.shields.io/travis/zangqilong/YGCTrimVideoView.svg?style=flat)](https://travis-ci.org/zangqilong/YGCTrimVideoView)
-[![Version](https://img.shields.io/cocoapods/v/YGCTrimVideoView.svg?style=flat)](http://cocoapods.org/pods/YGCTrimVideoView)
-[![License](https://img.shields.io/cocoapods/l/YGCTrimVideoView.svg?style=flat)](http://cocoapods.org/pods/YGCTrimVideoView)
-[![Platform](https://img.shields.io/cocoapods/p/YGCTrimVideoView.svg?style=flat)](http://cocoapods.org/pods/YGCTrimVideoView)
+A wechat like video trim time view.
 
-## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+### Features
+- [x] left and right time control
+- [x] custom your left side bar and right
+- [x] support setup maxmium duration and minimum duration
+
+
+## Usage
+### Initialize
+
+```  
+NSString *path = [[NSBundle mainBundle] pathForResource:@"videoName"
+                                                     ofType:@"MP4"];
+    YGCTrimVideoView *ygcTrimView = [[YGCTrimVideoView alloc] initWithFrame:CGRectMake(0, 75, self.view.bounds.size.width, 80)
+                                                       assetUR:[NSURL fileURLWithPath:path]];
+    [self.view addSubview:self.ygcTrimView];
+```
+That's all
+
+### Custom Your View
+
+
+
+## Installing
+
+#### Cocoapods
+`pod 'YGCVideoToolbox`
 
 ## Requirements
 
-## Installation
+* iOS 10 or higher
 
-YGCTrimVideoView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## Authors
 
-```ruby
-pod 'YGCTrimVideoView'
-```
+* **zang qilong** -  [zangqilong](https://github.com/zangqilong198812)
 
-## Author
+## Communication
 
-zangqilong, zangqilong@gmail.com
+* If you **found a bug**, open an issue.
+* If you **have a feature request**, open an issue.
+* If you **want to contribute**, submit a pull request.
 
 ## License
 
-YGCTrimVideoView is available under the MIT license. See the LICENSE file for more info.
+This project is licensed under the MIT License.
+
+
