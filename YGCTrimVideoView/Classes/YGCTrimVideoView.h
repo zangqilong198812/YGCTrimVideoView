@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+typedef void(^YGCExportFinished)(BOOL success);
+
 @protocol YGCTrimVideoViewDelegate <NSObject>
 
 - (void)videoBeginTimeChanged:(CMTime)begin;
@@ -71,6 +73,6 @@
        sidebarWidth:(CGFloat)width
    controlViewInset:(CGFloat)inset;
 
-- (void)exportVideo;
+- (void)exportVideo:(YGCExportFinished)finishedBlock;
 
 @end

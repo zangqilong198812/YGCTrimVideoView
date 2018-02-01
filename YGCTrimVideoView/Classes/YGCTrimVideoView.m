@@ -265,14 +265,14 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
 #pragma mark - Export
 
-- (void)exportVideo {
+- (void)exportVideo:(YGCExportFinished)finishedBlock {
     NSString *tmpFile = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
     AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:self.currentAsset presetName:AVAssetExportPresetHighestQuality];
     session.outputURL = [NSURL fileURLWithPath:tmpFile];
     session.outputFileType = AVFileTypeQuickTimeMovie;
     [session exportAsynchronouslyWithCompletionHandler:^{
         if (session.status == AVAssetExportSessionStatusCompleted) {
-            NSLog(@"success,%@", tmpFile);
+            finishedBlock(YES);
         }
     }];
 }

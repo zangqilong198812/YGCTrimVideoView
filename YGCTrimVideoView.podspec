@@ -31,12 +31,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'YGCTrimVideoView/Classes/**/*'
+  s.source_files = 'YGCTrimVideoView/Classes/*.{h,m,c}'
   
   s.resource_bundles = {
     'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.xcassets']
   }
 
-  s.public_header_files = 'Pod/Classes/**/YGCTrimVideoView.h'
+  s.public_header_files = 'YGCTrimVideoView/Classes/*.h'
   s.frameworks = 'AVFoundation'
 end
