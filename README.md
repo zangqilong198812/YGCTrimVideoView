@@ -23,6 +23,8 @@ A wechat like video trim time view.
 - [x] support setup maximum duration and minimum duration
 
 
+## Looks like
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fo15brtdgkg30cz0p8qv6.gif)
 ## Usage
 ### Initialize
 
@@ -35,7 +37,6 @@ A wechat like video trim time view.
 ```
 That's all
 
-### Custom Your View
 
 
 
