@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YGCTrimVideoView'
-  s.version          = '0.1.9'
+  s.version          = '0.2.0'
   s.summary          = 'A wechat like video editor view.'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.source_files = 'YGCTrimVideoView/Classes/*.{h,m,c}'
   
   s.resource_bundles = {
-    'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.xcassets']
+    'YGCTrimVideoView' => ['YGCTrimVideoView/Assets/*.bundle']
   }
 
   s.public_header_files = 'YGCTrimVideoView/Classes/*.h'
