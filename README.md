@@ -44,6 +44,7 @@ That's all
 
 #### Cocoapods
 `pod 'YGCTrimVideoView'`
+ please use version 0.2.0
 
 ## Requirements
 
