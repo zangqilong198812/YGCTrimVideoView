@@ -84,7 +84,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 }
 
 - (NSTimeInterval)pixelSeconds {
-    return self.maxSeconds/self.controlView.ygc_width;
+    return [self acturalMaxSecons]/self.controlView.ygc_width;
 }
 
 - (NSTimeInterval)cellTime {
@@ -93,6 +93,16 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
 - (CGFloat)cellWidth {
     return self.controlView.ygc_width/10;
+}
+
+- (CGFloat)acturalMaxSecons {
+    NSTimeInterval duration = CMTimeGetSeconds(self.asset.duration);
+    if (duration < self.maxSeconds) {
+        return duration;
+    }else {
+        return self.maxSeconds;
+    }
+    
 }
 
 #pragma mark - Getter
@@ -130,14 +140,6 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 - (void)setMaskColor:(UIColor *)maskColor {
     _maskColor = maskColor;
     self.controlView.maskColor = _maskColor;
-}
-
-- (void)setMaxSeconds:(NSTimeInterval)maxSeconds {
-    _maxSeconds = maxSeconds;
-    NSTimeInterval duration = CMTimeGetSeconds(self.asset.duration);
-    if (duration < _maxSeconds) {
-        _maxSeconds = duration;
-    }
 }
 
 - (void)setMinSeconds:(NSTimeInterval)minSeconds {

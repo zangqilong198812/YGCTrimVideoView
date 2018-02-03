@@ -51,11 +51,7 @@ static const CGFloat kDefaultControlBarWidth = 10;
             self.rightControlBar.image = rightImage;
         }
 
-        if (!centerImage) {
-            self.centerRangeView.image = [[UIImage bundleImage:@"default_range_image"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-        }else {
-            self.centerRangeView.image = centerImage;
-        }
+        self.centerRangeView.image = centerImage;
 
         self.centerAlphaRangeView.image = [[UIImage bundleImage:@"transparent_bgimage"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
 
