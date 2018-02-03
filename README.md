@@ -43,7 +43,9 @@ That's all
 ## Installing
 
 #### Cocoapods
-`pod 'YGCTrimVideoView'`
+`pod 'YGCTrimVideoView'`  
+
+ please use version 0.2.0
 
 ## Requirements
 

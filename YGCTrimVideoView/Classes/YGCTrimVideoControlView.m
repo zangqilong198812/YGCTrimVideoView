@@ -8,6 +8,7 @@
 
 #import "YGCTrimVideoControlView.h"
 #import "UIView+YGCFrameUtil.h"
+#import "UIImage+BundleImage.h"
 
 static const CGFloat kDefaultControlBarWidth = 10;
 
@@ -39,24 +40,24 @@ static const CGFloat kDefaultControlBarWidth = 10;
         [self commonInit];
 
         if (!leftImage) {
-            self.leftControlBar.image = [UIImage imageNamed:@"default_sidebar_image"];
+            self.leftControlBar.image = [UIImage bundleImage:@"default_sidebar_image"];
         }else {
             self.leftControlBar.image = leftImage;
         }
 
-        if (!leftImage) {
-            self.rightControlBar.image = [UIImage imageNamed:@"default_sidebar_image"];
+        if (!rightImage) {
+            self.rightControlBar.image = [UIImage bundleImage:@"default_sidebar_image"];
         }else {
             self.rightControlBar.image = rightImage;
         }
 
         if (!centerImage) {
-            self.centerRangeView.image = [UIImage imageNamed:@"default_range_image"];
+            self.centerRangeView.image = [[UIImage bundleImage:@"default_range_image"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
         }else {
             self.centerRangeView.image = centerImage;
         }
 
-        self.centerAlphaRangeView.image = [UIImage imageNamed:@"transparent_bgimage"];
+        self.centerAlphaRangeView.image = [[UIImage bundleImage:@"transparent_bgimage"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
 
         self.maskColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     }

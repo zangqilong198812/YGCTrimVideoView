@@ -37,10 +37,10 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 @implementation YGCTrimVideoView
 
 - (id)initWithFrame:(CGRect)frame
-            assetUR:(NSURL *)url
+            assetURL:(NSURL *)url
 {
     return [self initWithFrame:frame
-                       assetUR:url
+                       assetURL:url
               leftSidebarImage:nil
              rightSidebarImage:nil
               centerRangeImage:nil
@@ -50,7 +50,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
 
 - (id)initWithFrame:(CGRect)frame
-            assetUR:(NSURL *)url
+            assetURL:(NSURL *)url
    leftSidebarImage:(UIImage *)leftImage
   rightSidebarImage:(UIImage *)rightImage
    centerRangeImage:(UIImage *)centerImage

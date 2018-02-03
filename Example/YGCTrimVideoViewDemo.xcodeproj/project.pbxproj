@@ -19,8 +19,9 @@
 		50C03D5C202309C8001A4416 /* YGCThumbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D53202309C8001A4416 /* YGCThumbCollectionViewCell.m */; };
 		50C03D5D202309C8001A4416 /* YGCTrimVideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D55202309C8001A4416 /* YGCTrimVideoControlView.m */; };
 		50C03D5E202309C8001A4416 /* YGCTrimVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C03D57202309C8001A4416 /* YGCTrimVideoView.m */; };
-		50C03D60202309FD001A4416 /* trim.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D5F202309FC001A4416 /* trim.xcassets */; };
 		50C03D6220230A79001A4416 /* zuxian.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 50C03D6120230A79001A4416 /* zuxian.MP4 */; };
+		50D590D92024577400D3014F /* UIImage+BundleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D590D82024577400D3014F /* UIImage+BundleImage.m */; };
+		50D590DB2024597A00D3014F /* defaultImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50D590DA2024597900D3014F /* defaultImage.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +66,10 @@
 		50C03D55202309C8001A4416 /* YGCTrimVideoControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCTrimVideoControlView.m; sourceTree = "<group>"; };
 		50C03D56202309C8001A4416 /* YGCTrimVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGCTrimVideoView.h; sourceTree = "<group>"; };
 		50C03D57202309C8001A4416 /* YGCTrimVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCTrimVideoView.m; sourceTree = "<group>"; };
-		50C03D5F202309FC001A4416 /* trim.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = trim.xcassets; sourceTree = "<group>"; };
 		50C03D6120230A79001A4416 /* zuxian.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zuxian.MP4; sourceTree = "<group>"; };
+		50D590D72024577400D3014F /* UIImage+BundleImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+BundleImage.h"; sourceTree = "<group>"; };
+		50D590D82024577400D3014F /* UIImage+BundleImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BundleImage.m"; sourceTree = "<group>"; };
+		50D590DA2024597900D3014F /* defaultImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = defaultImage.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +166,7 @@
 		50C03D4B202309C8001A4416 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				50C03D5F202309FC001A4416 /* trim.xcassets */,
+				50D590DA2024597900D3014F /* defaultImage.bundle */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -173,6 +176,8 @@
 			children = (
 				50C03D50202309C8001A4416 /* UIView+YGCFrameUtil.h */,
 				50C03D51202309C8001A4416 /* UIView+YGCFrameUtil.m */,
+				50D590D72024577400D3014F /* UIImage+BundleImage.h */,
+				50D590D82024577400D3014F /* UIImage+BundleImage.m */,
 				50C03D52202309C8001A4416 /* YGCThumbCollectionViewCell.h */,
 				50C03D53202309C8001A4416 /* YGCThumbCollectionViewCell.m */,
 				50C03D54202309C8001A4416 /* YGCTrimVideoControlView.h */,
@@ -290,9 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C03D242023098E001A4416 /* LaunchScreen.storyboard in Resources */,
-				50C03D60202309FD001A4416 /* trim.xcassets in Resources */,
 				50C03D212023098E001A4416 /* Assets.xcassets in Resources */,
 				50C03D1F2023098E001A4416 /* Main.storyboard in Resources */,
+				50D590DB2024597A00D3014F /* defaultImage.bundle in Resources */,
 				50C03D6220230A79001A4416 /* zuxian.MP4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C03D5B202309C8001A4416 /* UIView+YGCFrameUtil.m in Sources */,
+				50D590D92024577400D3014F /* UIImage+BundleImage.m in Sources */,
 				50C03D5E202309C8001A4416 /* YGCTrimVideoView.m in Sources */,
 				50C03D1C2023098E001A4416 /* ViewController.m in Sources */,
 				50C03D272023098E001A4416 /* main.m in Sources */,
