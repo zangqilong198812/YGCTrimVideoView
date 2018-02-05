@@ -21,6 +21,7 @@ A wechat like video trim time view.
 - [x] left and right time control
 - [x] custom your left side bar and right
 - [x] support setup maximum duration and minimum duration
+- [x] export video file from your time crop setting
 
 
 ## Looks like
@@ -37,15 +38,77 @@ A wechat like video trim time view.
 ```
 That's all
 
+### Make custom UI
+
+```
+- (id)initWithFrame:(CGRect)frame
+   leftControlImage:(UIImage *)leftImage
+  rightControlImage:(UIImage *)rightImage
+   centerRangeImage:(UIImage *)centerImage
+       sideBarWidth:(CGFloat)sidebarWidth;
+```
+
+* `leftImage` you could setup your left sidebar with a image
+* `rightImage` same as leftImage
+* `centerRangeImage` the border image around the slider, maybe required set the image's resize inset
+* `sideBarWidth` the control bar width
+
+### Setup maximum duration and minimum duration
+just setup the property `maxSeconds` and `minSeconds`.
+
+``` 
+// min duration is 2 and max duration is 10 
+self.ygcTrimView.minSeconds = 2;
+self.ygcTrimView.maxSeconds = 10;
+```
+
+### Preview the cropped video
+
+in the delegate funtion 
 
 
+```
+- (void)dragActionEnded:(AVMutableComposition *)asset
+```
+
+every time your finished dragging the control bar
+YGCTrimView will generate a AVMutableCompsition.You could create a AVPlayer and play the composition directly.
+like
+
+```  
+- (void)dragActionEnded:(AVMutableComposition *)asset {
+  self.playerItem = [[AVPlayerItem alloc] initWithAsset:asset];
+  [self.player replaceCurrentItemWithPlayerItem:self.playerItem];
+  [self.player play];
+
+}
+```
+
+### Export Video
+YGCTrimVideoView support two ways to export a video file.
+**First Method**
+
+```  
+- (void)dragActionEnded:(AVMutableComposition *)asset;
+```
+
+get a AVMutableComposition from the delegate function. An AVMutableComposition is an AVAsset.So you could use AVExportSession to export a video file from AVMutableComposition.
+
+**Second Method**
+
+```
+- (void)exportVideo:(YGCExportFinished)finishedBlock;
+```
+you could use the function directly to export a video file .The finishedBlock will give you the video url that from the sandbox.
 
 ## Installing
 
 #### Cocoapods
-`pod 'YGCTrimVideoView'`  
-
- please use version 0.2.2
+In your podfile.
+`pod 'YGCTrimVideoView', '~> 0.2.2' ` 
+then `pod install`
+if you get an error " Unable to satisfy the following requirements", please use 
+`pod install --repo-update`
 
 ## Requirements
 
