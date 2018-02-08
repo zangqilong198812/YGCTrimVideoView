@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YGCTrimVideoView.h"
+#import <Photos/Photos.h>
 
 @interface ViewController ()<YGCTrimVideoViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *previewContainer;
@@ -74,7 +75,15 @@
 }
 
 - (IBAction)generatorVideo:(id)sender {
-
+    [self.ygcTrimView exportVideo:^(BOOL success, NSURL *outputURL) {
+        if (success) {
+            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:outputURL];
+            } completionHandler:^(BOOL success, NSError * _Nullable error) {
+                
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

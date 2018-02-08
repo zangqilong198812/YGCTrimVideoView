@@ -22,9 +22,20 @@
                                 <rect key="frame" x="20" y="40" width="335" height="537"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4s-YJ-sAW">
+                                <rect key="frame" x="320" y="30" width="45" height="30"/>
+                                <state key="normal" title="export">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generatorVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xu-wz-DeB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="J4s-YJ-sAW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="BTq-AA-wcc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J4s-YJ-sAW" secondAttribute="trailing" constant="10" id="MQ2-2P-zEX"/>
                             <constraint firstItem="1xp-iV-Zxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ONh-OM-EyR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1xp-iV-Zxt" secondAttribute="bottom" constant="90" id="XbF-Yk-a4Y"/>
                             <constraint firstItem="1xp-iV-Zxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ojr-Wp-B2x"/>

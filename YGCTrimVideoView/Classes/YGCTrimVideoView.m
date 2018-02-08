@@ -58,7 +58,8 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
    controlViewInset:(CGFloat)inset
 {
     if (self = [super initWithFrame:frame]) {
-
+        _startTime = kCMTimeZero;
+        _endTime = kCMTimeZero;
         _asset = [[AVURLAsset alloc] initWithURL:url options:nil];
         _currentAsset = self.asset;
         _controlInset = inset;
@@ -196,6 +197,26 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
     return UIEdgeInsetsMake(0, self.controlInset, 0, self.controlInset);
 }
 
+#pragma mark - ScrollView Delegate
+
+// stackoverflow:https://stackoverflow.com/questions/993280/how-to-detect-when-a-uiscrollview-has-finished-scrolling
+-(void)scrollViewDidScroll:(UIScrollView *)sender
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    [self performSelector:@selector(scrollViewDidEndScrollingAnimation:) withObject:sender afterDelay:0.3];
+    
+}
+
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    [self refreshVideoTime:[self.controlView leftBarFrame] rightFrmae:[self.controlView rightBarFrame]];
+    _currentAsset = [self trimVideo];
+    if ([self.delegate respondsToSelector:@selector(dragActionEnded:)]) {
+        [self.delegate dragActionEnded:self.currentAsset];
+    }
+}
+
 #pragma mark - Trim ControlView Delegate
 
 - (void)leftSideBarChangedFrame:(CGRect)leftFrame rightBarCurrentFrame:(CGRect)rightFrame {
@@ -269,6 +290,13 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
         assetAudioTrack = [asset tracksWithMediaType:AVMediaTypeAudio][0];
     }
 
+    // avoid user doesn't drag control bar
+    if (CMTimeCompare(_startTime, kCMTimeZero) == 0 &&
+        CMTimeCompare(_startTime, kCMTimeZero) == 0)
+    {
+        _endTime = CMTimeMakeWithSeconds([self acturalMaxSecons], self.asset.duration.timescale);
+    }
+    
     CMTimeRange cutRange = CMTimeRangeMake(_startTime, _endTime);
     NSError *error = nil;
 
@@ -293,11 +321,12 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 #pragma mark - Export
 
 - (void)exportVideo:(YGCExportFinished)finishedBlock {
+    AVMutableComposition *asset = [self trimVideo];
     NSString *tmpFile = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:tmpFile]) {
         [[NSFileManager defaultManager] removeItemAtPath:tmpFile error:nil];
     }
-    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:self.currentAsset presetName:AVAssetExportPresetHighestQuality];
+    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetHighestQuality];
     session.outputURL = [NSURL fileURLWithPath:tmpFile];
     session.outputFileType = AVFileTypeQuickTimeMovie;
     [session exportAsynchronouslyWithCompletionHandler:^{

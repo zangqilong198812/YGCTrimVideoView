@@ -36,4 +36,7 @@
 - (void)resetLeftSideBarImage:(UIImage *)leftImage;
 - (void)resetRightSideBarImage:(UIImage *)rightImage;
 - (void)resetCenterRangeImage:(UIImage *)centerRangeImage;
+
+- (CGRect)leftBarFrame;
+- (CGRect)rightBarFrame;
 @end

@@ -224,4 +224,12 @@ static const CGFloat kDefaultControlBarWidth = 10;
     self.centerRangeView.image = centerRangeImage;
 }
 
+- (CGRect)leftBarFrame {
+    return self.leftControlBar.frame;
+}
+
+- (CGRect)rightBarFrame {
+    return self.rightControlBar.frame;
+}
+
 @end
