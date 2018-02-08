@@ -85,7 +85,7 @@ like
 ```
 
 ### Export Video
-YGCTrimVideoView support two ways to export a video file.
+YGCTrimVideoView support two ways to export a video file.  
 **First Method**
 
 ```  
@@ -105,9 +105,9 @@ you could use the function directly to export a video file .The finishedBlock wi
 
 #### Cocoapods
 In your podfile.
-`pod 'YGCTrimVideoView', '~> 0.2.2' ` 
+`pod 'YGCTrimVideoView', '~> 0.2.2' `   
 then `pod install`
-if you get an error " Unable to satisfy the following requirements", please use 
+if you get an error " Unable to satisfy the following requirements", please use   
 `pod install --repo-update`
 
 ## Requirements
