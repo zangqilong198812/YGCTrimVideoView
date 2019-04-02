@@ -292,7 +292,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 
     // avoid user doesn't drag control bar
     if (CMTimeCompare(_startTime, kCMTimeZero) == 0 &&
-        CMTimeCompare(_startTime, kCMTimeZero) == 0)
+        CMTimeCompare(_endTime, kCMTimeZero) == 0)
     {
         _endTime = CMTimeMakeWithSeconds([self acturalMaxSecons], self.asset.duration.timescale);
     }
