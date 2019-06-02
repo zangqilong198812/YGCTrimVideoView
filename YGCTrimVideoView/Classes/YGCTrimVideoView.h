@@ -61,6 +61,9 @@ typedef void(^YGCExportFinished)(BOOL success, NSURL *outputURL);
             assetURL:(NSURL *)url;
 
 - (id)initWithFrame:(CGRect)frame
+              asset:(AVAsset *)asset;
+
+- (id)initWithFrame:(CGRect)frame
             assetURL:(NSURL *)url
    leftSidebarImage:(UIImage *)leftImage
   rightSidebarImage:(UIImage *)rightImage

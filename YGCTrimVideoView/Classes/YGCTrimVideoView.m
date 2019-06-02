@@ -26,7 +26,7 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
 @property (nonatomic, strong) UICollectionView *thumbCollectionView;
 @property (nonatomic, strong) YGCTrimVideoControlView *controlView;
 @property (nonatomic, assign) CGFloat controlInset;
-@property (nonatomic, strong) AVURLAsset *asset;
+@property (nonatomic, strong) AVAsset *asset;
 @property (nonatomic, strong) AVAssetImageGenerator *imageGenerator;
 @property (nonatomic, strong) NSMutableArray<UIImage *> *thumbImageArray;
 @property (nonatomic, strong) NSMutableArray<NSValue *> *timeArray;
@@ -46,6 +46,17 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
               centerRangeImage:nil
                   sidebarWidth:kDefaultSidebarWidth
               controlViewInset:20];
+}
+
+- (id)initWithFrame:(CGRect)frame
+              asset:(AVAsset *)asset
+{
+  return [self initWithFrame:frame asset:asset
+            leftSidebarImage:nil
+           rightSidebarImage:nil
+            centerRangeImage:nil
+                sidebarWidth:kDefaultSidebarWidth
+            controlViewInset:20];
 }
 
 
@@ -75,6 +86,34 @@ static NSString * const kCellIdentifier = @"YGCThumbCollectionViewCell";
         [self generateVideoThumb];
     }
     return self;
+}
+
+- (id)initWithFrame:(CGRect)frame
+           asset:(AVAsset *)asset
+   leftSidebarImage:(UIImage *)leftImage
+  rightSidebarImage:(UIImage *)rightImage
+   centerRangeImage:(UIImage *)centerImage
+       sidebarWidth:(CGFloat)width
+   controlViewInset:(CGFloat)inset
+{
+  if (self = [super initWithFrame:frame]) {
+    _startTime = kCMTimeZero;
+    _endTime = kCMTimeZero;
+    _asset = asset;
+    _currentAsset = asset;
+    _controlInset = inset;
+    _leftSidebarImage = leftImage;
+    _rightSidebarImage = rightImage;
+    _centerRangeImage = centerImage;
+    _sidebarWidth = width;
+    self.thumbImageArray = [NSMutableArray array];
+    self.timeArray = [NSMutableArray array];
+    _maxSeconds = kDefaultMaxSeconds;
+    _minSeconds = kDefaultMinSeconds;
+    [self commonInit];
+    [self generateVideoThumb];
+  }
+  return self;
 }
 
 - (void)commonInit {
