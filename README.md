@@ -105,7 +105,7 @@ you could use the function directly to export a video file .The finishedBlock wi
 
 #### Cocoapods
 In your podfile.  
-`pod 'YGCTrimVideoView', '~> 0.2.3' `   
+`pod 'YGCTrimVideoView', '~> 0.2.5' `   
 then `pod install`
 if you get an error " Unable to satisfy the following requirements", please use   
 `pod install --repo-update`
