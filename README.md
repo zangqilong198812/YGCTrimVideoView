@@ -36,7 +36,8 @@ A wechat like video trim time view.
                                                        assetUR:[NSURL fileURLWithPath:path]];
     [self.view addSubview:self.ygcTrimView];
 ```
-That's all
+or pass the asset to YGCTrimVideoView directly.It has different initialize method.
+
 
 ### Make custom UI
 
@@ -105,7 +106,7 @@ you could use the function directly to export a video file .The finishedBlock wi
 
 #### Cocoapods
 In your podfile.  
-`pod 'YGCTrimVideoView', '~> 0.2.5' `   
+`pod 'YGCTrimVideoView', '~> 0.2.6' `   
 then `pod install`
 if you get an error " Unable to satisfy the following requirements", please use   
 `pod install --repo-update`
